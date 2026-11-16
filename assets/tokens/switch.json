@@ -1,0 +1,182 @@
+{
+  "source": "https://m3.material.io/components/switch/specs",
+  "snapshot": "2026-10-13_06-10-19",
+  "tokens": {
+    "md.comp.switch.disabled.handle.elevation": "md.sys.elevation.level0",
+    "md.comp.switch.disabled.handle.opacity": {
+      "opacity": 0.38
+    },
+    "md.comp.switch.disabled.selected.handle.color": "md.sys.color.surface",
+    "md.comp.switch.disabled.selected.handle.opacity": {
+      "opacity": 1
+    },
+    "md.comp.switch.disabled.selected.icon.color": "md.sys.color.on-surface",
+    "md.comp.switch.disabled.selected.icon.opacity": {
+      "opacity": 0.38
+    },
+    "md.comp.switch.disabled.selected.track.color": "md.sys.color.on-surface",
+    "md.comp.switch.disabled.track.opacity": {
+      "opacity": 0.12
+    },
+    "md.comp.switch.disabled.unselected.handle.color": "md.sys.color.on-surface",
+    "md.comp.switch.disabled.unselected.handle.opacity": {
+      "opacity": 0.38
+    },
+    "md.comp.switch.disabled.unselected.icon.color": "md.sys.color.surface-container-highest",
+    "md.comp.switch.disabled.unselected.icon.opacity": {
+      "opacity": 0.38
+    },
+    "md.comp.switch.disabled.unselected.track.color": "md.sys.color.surface-container-highest",
+    "md.comp.switch.disabled.unselected.track.outline.color": "md.sys.color.on-surface",
+    "md.comp.switch.focus.indicator.color": "md.sys.color.secondary",
+    "md.comp.switch.focus.indicator.offset": "md.sys.state.focus-indicator.outer-offset",
+    "md.comp.switch.focus.indicator.thickness": "md.sys.state.focus-indicator.thickness",
+    "md.comp.switch.handle.elevation": "md.sys.elevation.level1",
+    "md.comp.switch.handle.height": {
+      "length": {
+        "value": 20,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.switch.handle.shadow-color": "md.sys.color.shadow",
+    "md.comp.switch.handle.shape": "md.sys.shape.corner.full",
+    "md.comp.switch.handle.width": {
+      "length": {
+        "value": 20,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.switch.pressed.handle.height": {
+      "length": {
+        "value": 28,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.switch.pressed.handle.width": {
+      "length": {
+        "value": 28,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.switch.selected.focus.handle.color": "md.sys.color.primary-container",
+    "md.comp.switch.selected.focus.icon.color": "md.sys.color.primary",
+    "md.comp.switch.selected.focus.state-layer.color": "md.sys.color.primary",
+    "md.comp.switch.selected.focus.state-layer.opacity": "md.sys.state.focus.state-layer-opacity",
+    "md.comp.switch.selected.focus.track.color": "md.sys.color.primary",
+    "md.comp.switch.selected.handle.color": "md.sys.color.on-primary",
+    "md.comp.switch.selected.handle.height": {
+      "length": {
+        "value": 24,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.switch.selected.handle.width": {
+      "length": {
+        "value": 24,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.switch.selected.hover.handle.color": "md.sys.color.primary-container",
+    "md.comp.switch.selected.hover.icon.color": "md.sys.color.primary",
+    "md.comp.switch.selected.hover.state-layer.color": "md.sys.color.primary",
+    "md.comp.switch.selected.hover.state-layer.opacity": "md.sys.state.hover.state-layer-opacity",
+    "md.comp.switch.selected.hover.track.color": "md.sys.color.primary",
+    "md.comp.switch.selected.icon.color": "md.sys.color.primary",
+    "md.comp.switch.selected.icon.size": {
+      "length": {
+        "value": 16,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.switch.selected.pressed.handle.color": "md.sys.color.primary-container",
+    "md.comp.switch.selected.pressed.icon.color": "md.sys.color.primary",
+    "md.comp.switch.selected.pressed.state-layer.color": "md.sys.color.primary",
+    "md.comp.switch.selected.pressed.state-layer.opacity": "md.sys.state.pressed.state-layer-opacity",
+    "md.comp.switch.selected.pressed.track.color": "md.sys.color.primary",
+    "md.comp.switch.selected.track.color": {
+      "byContext": {
+        "default": "md.sys.color.primary",
+        "Contrast=Default & Platform=iOS & Theme=Dark": "md.ref.palette.primary50",
+        "Contrast=Medium contrast & Platform=iOS & Theme=Dark": "md.ref.palette.primary60"
+      }
+    },
+    "md.comp.switch.state-layer.shape": "md.sys.shape.corner.full",
+    "md.comp.switch.state-layer.size": {
+      "length": {
+        "value": 40,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.switch.track.height": {
+      "length": {
+        "value": 32,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.switch.track.outline.width": {
+      "length": {
+        "value": 2,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.switch.track.shape": "md.sys.shape.corner.full",
+    "md.comp.switch.track.width": {
+      "length": {
+        "value": 52,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.switch.unselected.focus.handle.color": "md.sys.color.on-surface-variant",
+    "md.comp.switch.unselected.focus.icon.color": "md.sys.color.surface-container-highest",
+    "md.comp.switch.unselected.focus.state-layer.color": "md.sys.color.on-surface",
+    "md.comp.switch.unselected.focus.state-layer.opacity": "md.sys.state.focus.state-layer-opacity",
+    "md.comp.switch.unselected.focus.track.color": "md.sys.color.surface-container-highest",
+    "md.comp.switch.unselected.focus.track.outline.color": "md.sys.color.outline",
+    "md.comp.switch.unselected.handle.color": "md.sys.color.outline",
+    "md.comp.switch.unselected.handle.height": {
+      "length": {
+        "value": 16,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.switch.unselected.handle.width": {
+      "length": {
+        "value": 16,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.switch.unselected.hover.handle.color": "md.sys.color.on-surface-variant",
+    "md.comp.switch.unselected.hover.icon.color": "md.sys.color.surface-container-highest",
+    "md.comp.switch.unselected.hover.state-layer.color": "md.sys.color.on-surface",
+    "md.comp.switch.unselected.hover.state-layer.opacity": "md.sys.state.hover.state-layer-opacity",
+    "md.comp.switch.unselected.hover.track.color": "md.sys.color.surface-container-highest",
+    "md.comp.switch.unselected.hover.track.outline.color": "md.sys.color.outline",
+    "md.comp.switch.unselected.icon.color": "md.sys.color.surface-container-highest",
+    "md.comp.switch.unselected.icon.size": {
+      "length": {
+        "value": 16,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.switch.unselected.pressed.handle.color": "md.sys.color.on-surface-variant",
+    "md.comp.switch.unselected.pressed.icon.color": "md.sys.color.surface-container-highest",
+    "md.comp.switch.unselected.pressed.state-layer.color": "md.sys.color.on-surface",
+    "md.comp.switch.unselected.pressed.state-layer.opacity": "md.sys.state.pressed.state-layer-opacity",
+    "md.comp.switch.unselected.pressed.track.color": "md.sys.color.surface-container-highest",
+    "md.comp.switch.unselected.pressed.track.outline.color": "md.sys.color.outline",
+    "md.comp.switch.unselected.track.color": "md.sys.color.surface-container-highest",
+    "md.comp.switch.unselected.track.outline.color": "md.sys.color.outline",
+    "md.comp.switch.with-icon.handle.height": {
+      "length": {
+        "value": 24,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.switch.with-icon.handle.width": {
+      "length": {
+        "value": 24,
+        "unit": "DIPS"
+      }
+    }
+  }
+}

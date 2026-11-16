@@ -1,0 +1,172 @@
+{
+  "source": "https://m3.material.io/components/tabs/specs",
+  "snapshot": "2026-10-13_06-10-19",
+  "tokens": {
+    "md.comp.primary-navigation-tab.active-indicator.color": "md.sys.color.primary",
+    "md.comp.primary-navigation-tab.active-indicator.height": {
+      "length": {
+        "value": 3,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.primary-navigation-tab.active-indicator.shape": {
+      "shape": {
+        "family": "SHAPE_FAMILY_ROUNDED_CORNERS",
+        "topLeft": {
+          "value": 3,
+          "unit": "DIPS"
+        },
+        "topRight": {
+          "value": 3,
+          "unit": "DIPS"
+        },
+        "bottomLeft": {
+          "unit": "DIPS"
+        },
+        "bottomRight": {
+          "unit": "DIPS"
+        },
+        "defaultSize": {
+          "value": 3,
+          "unit": "DIPS"
+        }
+      }
+    },
+    "md.comp.primary-navigation-tab.active.focus.state-layer.color": "md.sys.color.primary",
+    "md.comp.primary-navigation-tab.active.focus.state-layer.opacity": "md.sys.state.focus.state-layer-opacity",
+    "md.comp.primary-navigation-tab.active.hover.state-layer.color": "md.sys.color.primary",
+    "md.comp.primary-navigation-tab.active.hover.state-layer.opacity": "md.sys.state.hover.state-layer-opacity",
+    "md.comp.primary-navigation-tab.active.pressed.state-layer.color": "md.sys.color.primary",
+    "md.comp.primary-navigation-tab.active.pressed.state-layer.opacity": "md.sys.state.pressed.state-layer-opacity",
+    "md.comp.primary-navigation-tab.container.color": "md.sys.color.surface",
+    "md.comp.primary-navigation-tab.container.elevation": "md.sys.elevation.level0",
+    "md.comp.primary-navigation-tab.container.height": {
+      "length": {
+        "value": 48,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.primary-navigation-tab.container.shape": "md.sys.shape.corner.none",
+    "md.comp.primary-navigation-tab.divider.color": "md.sys.color.surface-variant",
+    "md.comp.primary-navigation-tab.divider.height": {
+      "length": {
+        "value": 1,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.primary-navigation-tab.focus.indicator.color": "md.sys.color.secondary",
+    "md.comp.primary-navigation-tab.focus.indicator.outline.offset": "md.sys.state.focus-indicator.inner-offset",
+    "md.comp.primary-navigation-tab.focus.indicator.thickness": "md.sys.state.focus-indicator.thickness",
+    "md.comp.primary-navigation-tab.inactive.focus.state-layer.color": "md.sys.color.on-surface",
+    "md.comp.primary-navigation-tab.inactive.focus.state-layer.opacity": "md.sys.state.focus.state-layer-opacity",
+    "md.comp.primary-navigation-tab.inactive.hover.state-layer.color": "md.sys.color.on-surface",
+    "md.comp.primary-navigation-tab.inactive.hover.state-layer.opacity": "md.sys.state.hover.state-layer-opacity",
+    "md.comp.primary-navigation-tab.inactive.pressed.state-layer.color": "md.sys.color.primary",
+    "md.comp.primary-navigation-tab.inactive.pressed.state-layer.opacity": "md.sys.state.pressed.state-layer-opacity",
+    "md.comp.primary-navigation-tab.with-icon-and-label-text.container.height": {
+      "length": {
+        "value": 64,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.primary-navigation-tab.with-icon.active.focus.icon.color": "md.sys.color.primary",
+    "md.comp.primary-navigation-tab.with-icon.active.hover.icon.color": "md.sys.color.primary",
+    "md.comp.primary-navigation-tab.with-icon.active.icon.color": "md.sys.color.primary",
+    "md.comp.primary-navigation-tab.with-icon.active.pressed.icon.color": "md.sys.color.primary",
+    "md.comp.primary-navigation-tab.with-icon.icon.size": {
+      "length": {
+        "value": 24,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.primary-navigation-tab.with-icon.inactive.focus.icon.color": "md.sys.color.on-surface",
+    "md.comp.primary-navigation-tab.with-icon.inactive.hover.icon.color": "md.sys.color.on-surface",
+    "md.comp.primary-navigation-tab.with-icon.inactive.icon.color": "md.sys.color.on-surface-variant",
+    "md.comp.primary-navigation-tab.with-icon.inactive.pressed.icon.color": "md.sys.color.on-surface",
+    "md.comp.primary-navigation-tab.with-label-text.active.focus.label-text.color": "md.sys.color.primary",
+    "md.comp.primary-navigation-tab.with-label-text.active.hover.label-text.color": "md.sys.color.primary",
+    "md.comp.primary-navigation-tab.with-label-text.active.label-text.color": "md.sys.color.primary",
+    "md.comp.primary-navigation-tab.with-label-text.active.pressed.label-text.color": "md.sys.color.primary",
+    "md.comp.primary-navigation-tab.with-label-text.inactive.focus.label-text.color": "md.sys.color.on-surface",
+    "md.comp.primary-navigation-tab.with-label-text.inactive.hover.label-text.color": "md.sys.color.on-surface",
+    "md.comp.primary-navigation-tab.with-label-text.inactive.label-text.color": "md.sys.color.on-surface-variant",
+    "md.comp.primary-navigation-tab.with-label-text.inactive.pressed.label-text.color": "md.sys.color.on-surface",
+    "md.comp.primary-navigation-tab.with-label-text.label-text.font": "md.sys.typescale.title-small.font",
+    "md.comp.primary-navigation-tab.with-label-text.label-text.line-height": "md.sys.typescale.title-small.line-height",
+    "md.comp.primary-navigation-tab.with-label-text.label-text.size": "md.sys.typescale.title-small.size",
+    "md.comp.primary-navigation-tab.with-label-text.label-text.tracking": "md.sys.typescale.title-small.tracking",
+    "md.comp.primary-navigation-tab.with-label-text.label-text.type": {
+      "type": {
+        "fontNameTokenName": "md.comp.primary-navigation-tab.with-label-text.label-text.font",
+        "fontWeightTokenName": "md.comp.primary-navigation-tab.with-label-text.label-text.weight",
+        "fontSizeTokenName": "md.comp.primary-navigation-tab.with-label-text.label-text.size",
+        "fontTrackingTokenName": "md.comp.primary-navigation-tab.with-label-text.label-text.tracking",
+        "lineHeightTokenName": "md.comp.primary-navigation-tab.with-label-text.label-text.line-height"
+      }
+    },
+    "md.comp.primary-navigation-tab.with-label-text.label-text.weight": "md.sys.typescale.title-small.weight",
+    "md.comp.secondary-navigation-tab.active-indicator.color": "md.sys.color.primary",
+    "md.comp.secondary-navigation-tab.active-indicator.height": {
+      "length": {
+        "value": 2,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.secondary-navigation-tab.active.label-text.color": "md.sys.color.on-surface",
+    "md.comp.secondary-navigation-tab.container.color": "md.sys.color.surface",
+    "md.comp.secondary-navigation-tab.container.elevation": "md.sys.elevation.level0",
+    "md.comp.secondary-navigation-tab.container.height": {
+      "length": {
+        "value": 48,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.secondary-navigation-tab.container.shadow-color": "md.sys.color.shadow",
+    "md.comp.secondary-navigation-tab.container.shape": "md.sys.shape.corner.none",
+    "md.comp.secondary-navigation-tab.divider.color": "md.sys.color.surface-variant",
+    "md.comp.secondary-navigation-tab.divider.height": {
+      "length": {
+        "value": 1,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.secondary-navigation-tab.focus.indicator.color": "md.sys.color.secondary",
+    "md.comp.secondary-navigation-tab.focus.indicator.outline.offset": "md.sys.state.focus-indicator.inner-offset",
+    "md.comp.secondary-navigation-tab.focus.indicator.thickness": "md.sys.state.focus-indicator.thickness",
+    "md.comp.secondary-navigation-tab.focus.label-text.color": "md.sys.color.on-surface",
+    "md.comp.secondary-navigation-tab.focus.state-layer.color": "md.sys.color.on-surface",
+    "md.comp.secondary-navigation-tab.focus.state-layer.opacity": "md.sys.state.focus.state-layer-opacity",
+    "md.comp.secondary-navigation-tab.hover.label-text.color": "md.sys.color.on-surface",
+    "md.comp.secondary-navigation-tab.hover.state-layer.color": "md.sys.color.on-surface",
+    "md.comp.secondary-navigation-tab.hover.state-layer.opacity": "md.sys.state.hover.state-layer-opacity",
+    "md.comp.secondary-navigation-tab.inactive.label-text.color": "md.sys.color.on-surface-variant",
+    "md.comp.secondary-navigation-tab.label-text.font": "md.sys.typescale.title-small.font",
+    "md.comp.secondary-navigation-tab.label-text.line-height": "md.sys.typescale.title-small.line-height",
+    "md.comp.secondary-navigation-tab.label-text.size": "md.sys.typescale.title-small.size",
+    "md.comp.secondary-navigation-tab.label-text.tracking": "md.sys.typescale.title-small.tracking",
+    "md.comp.secondary-navigation-tab.label-text.type": {
+      "type": {
+        "fontNameTokenName": "md.comp.secondary-navigation-tab.label-text.font",
+        "fontWeightTokenName": "md.comp.secondary-navigation-tab.label-text.weight",
+        "fontSizeTokenName": "md.comp.secondary-navigation-tab.label-text.size",
+        "fontTrackingTokenName": "md.comp.secondary-navigation-tab.label-text.tracking",
+        "lineHeightTokenName": "md.comp.secondary-navigation-tab.label-text.line-height"
+      }
+    },
+    "md.comp.secondary-navigation-tab.label-text.weight": "md.sys.typescale.title-small.weight",
+    "md.comp.secondary-navigation-tab.pressed.label-text.color": "md.sys.color.on-surface",
+    "md.comp.secondary-navigation-tab.pressed.state-layer.color": "md.sys.color.on-surface",
+    "md.comp.secondary-navigation-tab.pressed.state-layer.opacity": "md.sys.state.pressed.state-layer-opacity",
+    "md.comp.secondary-navigation-tab.with-icon.active.icon.color": "md.sys.color.on-surface",
+    "md.comp.secondary-navigation-tab.with-icon.focus.icon.color": "md.sys.color.on-surface",
+    "md.comp.secondary-navigation-tab.with-icon.hover.icon.color": "md.sys.color.on-surface",
+    "md.comp.secondary-navigation-tab.with-icon.icon.size": {
+      "length": {
+        "value": 24,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.secondary-navigation-tab.with-icon.inactive.icon.color": "md.sys.color.on-surface-variant",
+    "md.comp.secondary-navigation-tab.with-icon.pressed.icon.color": "md.sys.color.on-surface"
+  }
+}

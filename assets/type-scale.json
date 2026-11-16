@@ -1,0 +1,281 @@
+{
+  "source": "https://m3.material.io/styles/typography/type-scale-tokens",
+  "context": "Third-party static baseline / Web; size, line-height and tracking are scale numbers to map to host text units",
+  "snapshot": "2026-10-13_06-10-19",
+  "styles": {
+    "md.sys.typescale.body-large": {
+      "font": [
+        "Roboto"
+      ],
+      "size": 16,
+      "line-height": 24,
+      "weight": 400,
+      "tracking": 0.5
+    },
+    "md.sys.typescale.body-medium": {
+      "font": [
+        "Roboto"
+      ],
+      "size": 14,
+      "line-height": 20,
+      "weight": 400,
+      "tracking": 0.25
+    },
+    "md.sys.typescale.body-small": {
+      "font": [
+        "Roboto"
+      ],
+      "size": 12,
+      "line-height": 16,
+      "weight": 400,
+      "tracking": 0.4
+    },
+    "md.sys.typescale.display-large": {
+      "font": [
+        "Roboto"
+      ],
+      "size": 57,
+      "line-height": 64,
+      "weight": 400,
+      "tracking": -0.25
+    },
+    "md.sys.typescale.display-medium": {
+      "font": [
+        "Roboto"
+      ],
+      "size": 45,
+      "line-height": 52,
+      "weight": 400,
+      "tracking": 0
+    },
+    "md.sys.typescale.display-small": {
+      "font": [
+        "Roboto"
+      ],
+      "size": 36,
+      "line-height": 44,
+      "weight": 400,
+      "tracking": 0
+    },
+    "md.sys.typescale.emphasized.body-large": {
+      "font": [
+        "Roboto"
+      ],
+      "size": 16,
+      "line-height": 24,
+      "weight": 500,
+      "tracking": 0.5
+    },
+    "md.sys.typescale.emphasized.body-medium": {
+      "font": [
+        "Roboto"
+      ],
+      "size": 14,
+      "line-height": 20,
+      "weight": 500,
+      "tracking": 0.25
+    },
+    "md.sys.typescale.emphasized.body-small": {
+      "font": [
+        "Roboto"
+      ],
+      "size": 12,
+      "line-height": 16,
+      "weight": 500,
+      "tracking": 0.4
+    },
+    "md.sys.typescale.emphasized.display-large": {
+      "font": [
+        "Roboto"
+      ],
+      "size": 57,
+      "line-height": 64,
+      "weight": 500,
+      "tracking": -0.25
+    },
+    "md.sys.typescale.emphasized.display-medium": {
+      "font": [
+        "Roboto"
+      ],
+      "size": 45,
+      "line-height": 52,
+      "weight": 500,
+      "tracking": 0
+    },
+    "md.sys.typescale.emphasized.display-small": {
+      "font": [
+        "Roboto"
+      ],
+      "size": 36,
+      "line-height": 44,
+      "weight": 500,
+      "tracking": 0
+    },
+    "md.sys.typescale.emphasized.headline-large": {
+      "font": [
+        "Roboto"
+      ],
+      "size": 32,
+      "line-height": 40,
+      "weight": 500,
+      "tracking": 0
+    },
+    "md.sys.typescale.emphasized.headline-medium": {
+      "font": [
+        "Roboto"
+      ],
+      "size": 28,
+      "line-height": 36,
+      "weight": 500,
+      "tracking": 0
+    },
+    "md.sys.typescale.emphasized.headline-small": {
+      "font": [
+        "Roboto"
+      ],
+      "size": 24,
+      "line-height": 32,
+      "weight": 500,
+      "tracking": 0
+    },
+    "md.sys.typescale.emphasized.label-large": {
+      "font": [
+        "Roboto"
+      ],
+      "size": 14,
+      "line-height": 20,
+      "weight": 700,
+      "tracking": 0.1
+    },
+    "md.sys.typescale.emphasized.label-medium": {
+      "font": [
+        "Roboto"
+      ],
+      "size": 12,
+      "line-height": 16,
+      "weight": 700,
+      "tracking": 0.5
+    },
+    "md.sys.typescale.emphasized.label-small": {
+      "font": [
+        "Roboto"
+      ],
+      "size": 11,
+      "line-height": 16,
+      "weight": 700,
+      "tracking": 0.5
+    },
+    "md.sys.typescale.emphasized.title-large": {
+      "font": [
+        "Roboto"
+      ],
+      "size": 22,
+      "line-height": 28,
+      "weight": 500,
+      "tracking": 0
+    },
+    "md.sys.typescale.emphasized.title-medium": {
+      "font": [
+        "Roboto"
+      ],
+      "size": 16,
+      "line-height": 24,
+      "weight": 700,
+      "tracking": 0.15
+    },
+    "md.sys.typescale.emphasized.title-small": {
+      "font": [
+        "Roboto"
+      ],
+      "size": 14,
+      "line-height": 20,
+      "weight": 700,
+      "tracking": 0.1
+    },
+    "md.sys.typescale.headline-large": {
+      "font": [
+        "Roboto"
+      ],
+      "size": 32,
+      "line-height": 40,
+      "weight": 400,
+      "tracking": 0
+    },
+    "md.sys.typescale.headline-medium": {
+      "font": [
+        "Roboto"
+      ],
+      "size": 28,
+      "line-height": 36,
+      "weight": 400,
+      "tracking": 0
+    },
+    "md.sys.typescale.headline-small": {
+      "font": [
+        "Roboto"
+      ],
+      "size": 24,
+      "line-height": 32,
+      "weight": 400,
+      "tracking": 0
+    },
+    "md.sys.typescale.label-large": {
+      "font": [
+        "Roboto"
+      ],
+      "size": 14,
+      "line-height": 20,
+      "weight": 500,
+      "tracking": 0.1
+    },
+    "md.sys.typescale.label-medium": {
+      "font": [
+        "Roboto"
+      ],
+      "size": 12,
+      "line-height": 16,
+      "weight": 500,
+      "tracking": 0.5
+    },
+    "md.sys.typescale.label-small": {
+      "font": [
+        "Roboto"
+      ],
+      "size": 11,
+      "line-height": 16,
+      "weight": 500,
+      "tracking": 0.5
+    },
+    "md.sys.typescale.title-large": {
+      "font": [
+        "Roboto"
+      ],
+      "size": 22,
+      "line-height": 28,
+      "weight": 400,
+      "tracking": 0
+    },
+    "md.sys.typescale.title-medium": {
+      "font": [
+        "Roboto"
+      ],
+      "size": 16,
+      "line-height": 24,
+      "weight": 500,
+      "tracking": 0.15
+    },
+    "md.sys.typescale.title-small": {
+      "font": [
+        "Roboto"
+      ],
+      "size": 14,
+      "line-height": 20,
+      "weight": 500,
+      "tracking": 0.1
+    }
+  },
+  "weights": {
+    "md.sys.typescale.label-large.weight.prominent": 700,
+    "md.sys.typescale.label-medium.weight.prominent": 700
+  }
+}

@@ -1,0 +1,350 @@
+{
+  "source": "https://m3.material.io/components/time-pickers/specs",
+  "snapshot": "2026-10-13_06-10-19",
+  "tokens": {
+    "md.comp.time-input.container.color": "md.sys.color.surface-container-high",
+    "md.comp.time-input.container.elevation": "md.sys.elevation.level3",
+    "md.comp.time-input.container.shape": "md.sys.shape.corner.extra-large",
+    "md.comp.time-input.focus.indicator.color": "md.sys.color.secondary",
+    "md.comp.time-input.focus.indicator.outline.offset": "md.sys.state.focus-indicator.outer-offset",
+    "md.comp.time-input.focus.indicator.thickness": "md.sys.state.focus-indicator.thickness",
+    "md.comp.time-input.headline.color": "md.sys.color.on-surface-variant",
+    "md.comp.time-input.headline.font": "md.sys.typescale.label-medium.font",
+    "md.comp.time-input.headline.line-height": "md.sys.typescale.label-medium.line-height",
+    "md.comp.time-input.headline.size": "md.sys.typescale.label-medium.size",
+    "md.comp.time-input.headline.tracking": "md.sys.typescale.label-medium.tracking",
+    "md.comp.time-input.headline.type": {
+      "type": {
+        "fontNameTokenName": "md.comp.time-input.headline.font",
+        "fontWeightTokenName": "md.comp.time-input.headline.weight",
+        "fontSizeTokenName": "md.comp.time-input.headline.size",
+        "fontTrackingTokenName": "md.comp.time-input.headline.tracking",
+        "lineHeightTokenName": "md.comp.time-input.headline.line-height"
+      }
+    },
+    "md.comp.time-input.headline.weight": "md.sys.typescale.label-medium.weight",
+    "md.comp.time-input.period-selector.container.height": {
+      "length": {
+        "value": 72,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.time-input.period-selector.container.shape": "md.sys.shape.corner.small",
+    "md.comp.time-input.period-selector.container.width": {
+      "length": {
+        "value": 52,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.time-input.period-selector.focus.state-layer.opacity": "md.sys.state.focus.state-layer-opacity",
+    "md.comp.time-input.period-selector.hover.state-layer.opacity": "md.sys.state.hover.state-layer-opacity",
+    "md.comp.time-input.period-selector.label-text.font": "md.sys.typescale.title-medium.font",
+    "md.comp.time-input.period-selector.label-text.line-height": "md.sys.typescale.title-medium.line-height",
+    "md.comp.time-input.period-selector.label-text.size": "md.sys.typescale.title-medium.size",
+    "md.comp.time-input.period-selector.label-text.tracking": "md.sys.typescale.title-medium.tracking",
+    "md.comp.time-input.period-selector.label-text.type": {
+      "type": {
+        "fontNameTokenName": "md.comp.time-input.period-selector.label-text.font",
+        "fontWeightTokenName": "md.comp.time-input.period-selector.label-text.weight",
+        "fontSizeTokenName": "md.comp.time-input.period-selector.label-text.size",
+        "fontTrackingTokenName": "md.comp.time-input.period-selector.label-text.tracking",
+        "lineHeightTokenName": "md.comp.time-input.period-selector.label-text.line-height"
+      }
+    },
+    "md.comp.time-input.period-selector.label-text.weight": "md.sys.typescale.title-medium.weight",
+    "md.comp.time-input.period-selector.outline.color": "md.sys.color.outline",
+    "md.comp.time-input.period-selector.outline.width": {
+      "length": {
+        "value": 1,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.time-input.period-selector.pressed.state-layer.opacity": "md.sys.state.pressed.state-layer-opacity",
+    "md.comp.time-input.period-selector.selected.container.color": "md.sys.color.tertiary-container",
+    "md.comp.time-input.period-selector.selected.focus.label-text.color": "md.sys.color.on-tertiary-container",
+    "md.comp.time-input.period-selector.selected.focus.state-layer.color": "md.sys.color.on-tertiary-container",
+    "md.comp.time-input.period-selector.selected.hover.label-text.color": "md.sys.color.on-tertiary-container",
+    "md.comp.time-input.period-selector.selected.hover.state-layer.color": "md.sys.color.on-tertiary-container",
+    "md.comp.time-input.period-selector.selected.label-text.color": "md.sys.color.on-tertiary-container",
+    "md.comp.time-input.period-selector.selected.pressed.label-text.color": "md.sys.color.on-tertiary-container",
+    "md.comp.time-input.period-selector.selected.pressed.state-layer.color": "md.sys.color.on-tertiary-container",
+    "md.comp.time-input.period-selector.unselected.focus.label-text.color": "md.sys.color.on-surface-variant",
+    "md.comp.time-input.period-selector.unselected.focus.state-layer.color": "md.sys.color.on-surface-variant",
+    "md.comp.time-input.period-selector.unselected.hover.label-text.color": "md.sys.color.on-surface-variant",
+    "md.comp.time-input.period-selector.unselected.hover.state-layer.color": "md.sys.color.on-surface-variant",
+    "md.comp.time-input.period-selector.unselected.label-text.color": "md.sys.color.on-surface-variant",
+    "md.comp.time-input.period-selector.unselected.pressed.label-text.color": "md.sys.color.on-surface-variant",
+    "md.comp.time-input.period-selector.unselected.pressed.state-layer.color": "md.sys.color.on-surface-variant",
+    "md.comp.time-input.surface-tint-layer.color": "md.sys.color.surface-tint",
+    "md.comp.time-input.time-input-field.container.color": "md.sys.color.surface-container-highest",
+    "md.comp.time-input.time-input-field.container.height": {
+      "length": {
+        "value": 72,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.time-input.time-input-field.container.shape": "md.sys.shape.corner.small",
+    "md.comp.time-input.time-input-field.container.width": {
+      "length": {
+        "value": 96,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.time-input.time-input-field.focus.container.color": "md.sys.color.primary-container",
+    "md.comp.time-input.time-input-field.focus.label-text.color": "md.sys.color.on-primary-container",
+    "md.comp.time-input.time-input-field.focus.outline.color": "md.sys.color.primary",
+    "md.comp.time-input.time-input-field.focus.outline.width": {
+      "length": {
+        "value": 2,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.time-input.time-input-field.hover.label-text.color": "md.sys.color.on-surface",
+    "md.comp.time-input.time-input-field.hover.state-layer.color": "md.sys.color.on-surface",
+    "md.comp.time-input.time-input-field.hover.state-layer.opacity": "md.sys.state.hover.state-layer-opacity",
+    "md.comp.time-input.time-input-field.label-text.color": "md.sys.color.on-surface",
+    "md.comp.time-input.time-input-field.label-text.font": "md.sys.typescale.display-medium.font",
+    "md.comp.time-input.time-input-field.label-text.line-height": "md.sys.typescale.display-medium.line-height",
+    "md.comp.time-input.time-input-field.label-text.size": "md.sys.typescale.display-medium.size",
+    "md.comp.time-input.time-input-field.label-text.tracking": "md.sys.typescale.display-medium.tracking",
+    "md.comp.time-input.time-input-field.label-text.type": {
+      "type": {
+        "fontNameTokenName": "md.comp.time-input.time-input-field.label-text.font",
+        "fontWeightTokenName": "md.comp.time-input.time-input-field.label-text.weight",
+        "fontSizeTokenName": "md.comp.time-input.time-input-field.label-text.size",
+        "fontTrackingTokenName": "md.comp.time-input.time-input-field.label-text.tracking",
+        "lineHeightTokenName": "md.comp.time-input.time-input-field.label-text.line-height"
+      }
+    },
+    "md.comp.time-input.time-input-field.label-text.weight": "md.sys.typescale.display-medium.weight",
+    "md.comp.time-input.time-input-field.separator.color": "md.sys.color.on-surface",
+    "md.comp.time-input.time-input-field.separator.font": "md.sys.typescale.display-large.font",
+    "md.comp.time-input.time-input-field.separator.line-height": "md.sys.typescale.display-large.line-height",
+    "md.comp.time-input.time-input-field.separator.size": "md.sys.typescale.display-large.size",
+    "md.comp.time-input.time-input-field.separator.tracking": "md.sys.typescale.display-large.tracking",
+    "md.comp.time-input.time-input-field.separator.type": {
+      "type": {
+        "fontNameTokenName": "md.comp.time-input.time-input-field.separator.font",
+        "fontWeightTokenName": "md.comp.time-input.time-input-field.separator.weight",
+        "fontSizeTokenName": "md.comp.time-input.time-input-field.separator.size",
+        "fontTrackingTokenName": "md.comp.time-input.time-input-field.separator.tracking",
+        "lineHeightTokenName": "md.comp.time-input.time-input-field.separator.line-height"
+      }
+    },
+    "md.comp.time-input.time-input-field.separator.weight": "md.sys.typescale.display-large.weight",
+    "md.comp.time-input.time-input-field.supporting-text.color": "md.sys.color.on-surface-variant",
+    "md.comp.time-input.time-input-field.supporting-text.font": "md.sys.typescale.body-small.font",
+    "md.comp.time-input.time-input-field.supporting-text.line-height": "md.sys.typescale.body-small.line-height",
+    "md.comp.time-input.time-input-field.supporting-text.size": "md.sys.typescale.body-small.size",
+    "md.comp.time-input.time-input-field.supporting-text.tracking": "md.sys.typescale.body-small.tracking",
+    "md.comp.time-input.time-input-field.supporting-text.type": {
+      "type": {
+        "fontNameTokenName": "md.comp.time-input.time-input-field.supporting-text.font",
+        "fontWeightTokenName": "md.comp.time-input.time-input-field.supporting-text.weight",
+        "fontSizeTokenName": "md.comp.time-input.time-input-field.supporting-text.size",
+        "fontTrackingTokenName": "md.comp.time-input.time-input-field.supporting-text.tracking",
+        "lineHeightTokenName": "md.comp.time-input.time-input-field.supporting-text.line-height"
+      }
+    },
+    "md.comp.time-input.time-input-field.supporting-text.weight": "md.sys.typescale.body-small.weight",
+    "md.comp.time-picker.clock-dial.color": "md.sys.color.surface-container-highest",
+    "md.comp.time-picker.clock-dial.color.ignore": "md.sys.color.on-surface-variant",
+    "md.comp.time-picker.clock-dial.container.size": {
+      "length": {
+        "value": 256,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.time-picker.clock-dial.label-text.font": "md.sys.typescale.body-large.font",
+    "md.comp.time-picker.clock-dial.label-text.line-height": "md.sys.typescale.body-large.line-height",
+    "md.comp.time-picker.clock-dial.label-text.size": "md.sys.typescale.body-large.size",
+    "md.comp.time-picker.clock-dial.label-text.tracking": "md.sys.typescale.body-large.tracking",
+    "md.comp.time-picker.clock-dial.label-text.type": {
+      "type": {
+        "fontNameTokenName": "md.comp.time-picker.clock-dial.label-text.font",
+        "fontWeightTokenName": "md.comp.time-picker.clock-dial.label-text.weight",
+        "fontSizeTokenName": "md.comp.time-picker.clock-dial.label-text.size",
+        "fontTrackingTokenName": "md.comp.time-picker.clock-dial.label-text.tracking",
+        "lineHeightTokenName": "md.comp.time-picker.clock-dial.label-text.line-height"
+      }
+    },
+    "md.comp.time-picker.clock-dial.label-text.weight": "md.sys.typescale.body-large.weight",
+    "md.comp.time-picker.clock-dial.selected.label-text.color": "md.sys.color.on-primary",
+    "md.comp.time-picker.clock-dial.selector.center.container.color": "md.sys.color.primary",
+    "md.comp.time-picker.clock-dial.selector.center.container.shape": "md.sys.shape.corner.full",
+    "md.comp.time-picker.clock-dial.selector.center.container.size": {
+      "length": {
+        "value": 8,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.time-picker.clock-dial.selector.handle.container.color": "md.sys.color.primary",
+    "md.comp.time-picker.clock-dial.selector.handle.container.shape": "md.sys.shape.corner.full",
+    "md.comp.time-picker.clock-dial.selector.handle.container.size": {
+      "length": {
+        "value": 48,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.time-picker.clock-dial.selector.track.container.color": "md.sys.color.primary",
+    "md.comp.time-picker.clock-dial.selector.track.container.width": {
+      "length": {
+        "value": 2,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.time-picker.clock-dial.shape": "md.sys.shape.corner.full",
+    "md.comp.time-picker.clock-dial.shape.ignore": "md.sys.shape.corner.full",
+    "md.comp.time-picker.clock-dial.unselected.label-text.color": "md.sys.color.on-surface",
+    "md.comp.time-picker.container.color": "md.sys.color.surface-container-high",
+    "md.comp.time-picker.container.elevation": "md.sys.elevation.level3",
+    "md.comp.time-picker.container.shape": "md.sys.shape.corner.extra-large",
+    "md.comp.time-picker.headline.color": "md.sys.color.on-surface-variant",
+    "md.comp.time-picker.headline.font": "md.sys.typescale.label-medium.font",
+    "md.comp.time-picker.headline.line-height": "md.sys.typescale.label-medium.line-height",
+    "md.comp.time-picker.headline.size": "md.sys.typescale.label-medium.size",
+    "md.comp.time-picker.headline.tracking": "md.sys.typescale.label-medium.tracking",
+    "md.comp.time-picker.headline.type": {
+      "type": {
+        "fontNameTokenName": "md.comp.time-picker.headline.font",
+        "fontWeightTokenName": "md.comp.time-picker.headline.weight",
+        "fontSizeTokenName": "md.comp.time-picker.headline.size",
+        "fontTrackingTokenName": "md.comp.time-picker.headline.tracking",
+        "lineHeightTokenName": "md.comp.time-picker.headline.line-height"
+      }
+    },
+    "md.comp.time-picker.headline.weight": "md.sys.typescale.label-medium.weight",
+    "md.comp.time-picker.period-selector.container.shape": "md.sys.shape.corner.small",
+    "md.comp.time-picker.period-selector.focus.state-layer.opacity": "md.sys.state.focus.state-layer-opacity",
+    "md.comp.time-picker.period-selector.horizontal.container.height": {
+      "length": {
+        "value": 38,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.time-picker.period-selector.horizontal.container.width": {
+      "length": {
+        "value": 216,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.time-picker.period-selector.hover.state-layer.opacity": "md.sys.state.hover.state-layer-opacity",
+    "md.comp.time-picker.period-selector.label-text.font": "md.sys.typescale.title-medium.font",
+    "md.comp.time-picker.period-selector.label-text.line-height": "md.sys.typescale.title-medium.line-height",
+    "md.comp.time-picker.period-selector.label-text.size": "md.sys.typescale.title-medium.size",
+    "md.comp.time-picker.period-selector.label-text.tracking": "md.sys.typescale.title-medium.tracking",
+    "md.comp.time-picker.period-selector.label-text.type": {
+      "type": {
+        "fontNameTokenName": "md.comp.time-picker.period-selector.label-text.font",
+        "fontWeightTokenName": "md.comp.time-picker.period-selector.label-text.weight",
+        "fontSizeTokenName": "md.comp.time-picker.period-selector.label-text.size",
+        "fontTrackingTokenName": "md.comp.time-picker.period-selector.label-text.tracking",
+        "lineHeightTokenName": "md.comp.time-picker.period-selector.label-text.line-height"
+      }
+    },
+    "md.comp.time-picker.period-selector.label-text.weight": "md.sys.typescale.title-medium.weight",
+    "md.comp.time-picker.period-selector.outline.color": "md.sys.color.outline",
+    "md.comp.time-picker.period-selector.outline.width": {
+      "length": {
+        "value": 1,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.time-picker.period-selector.pressed.state-layer.opacity": "md.sys.state.pressed.state-layer-opacity",
+    "md.comp.time-picker.period-selector.selected.container.color": "md.sys.color.tertiary-container",
+    "md.comp.time-picker.period-selector.selected.focus.label-text.color": "md.sys.color.on-tertiary-container",
+    "md.comp.time-picker.period-selector.selected.focus.state-layer.color": "md.sys.color.on-tertiary-container",
+    "md.comp.time-picker.period-selector.selected.hover.label-text.color": "md.sys.color.on-tertiary-container",
+    "md.comp.time-picker.period-selector.selected.hover.state-layer.color": "md.sys.color.on-tertiary-container",
+    "md.comp.time-picker.period-selector.selected.label-text.color": "md.sys.color.on-tertiary-container",
+    "md.comp.time-picker.period-selector.selected.pressed.label-text.color": "md.sys.color.on-tertiary-container",
+    "md.comp.time-picker.period-selector.selected.pressed.state-layer.color": "md.sys.color.on-tertiary-container",
+    "md.comp.time-picker.period-selector.unselected.focus.label-text.color": "md.sys.color.on-surface-variant",
+    "md.comp.time-picker.period-selector.unselected.focus.state-layer.color": "md.sys.color.on-surface-variant",
+    "md.comp.time-picker.period-selector.unselected.hover.label-text.color": "md.sys.color.on-surface-variant",
+    "md.comp.time-picker.period-selector.unselected.hover.state-layer.color": "md.sys.color.on-surface-variant",
+    "md.comp.time-picker.period-selector.unselected.label-text.color": "md.sys.color.on-surface-variant",
+    "md.comp.time-picker.period-selector.unselected.pressed.label-text.color": "md.sys.color.on-surface-variant",
+    "md.comp.time-picker.period-selector.unselected.pressed.state-layer.color": "md.sys.color.on-surface-variant",
+    "md.comp.time-picker.period-selector.vertical.container.height": {
+      "length": {
+        "value": 80,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.time-picker.period-selector.vertical.container.width": {
+      "length": {
+        "value": 52,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.time-picker.surface-tint-layer.color": "md.sys.color.surface-tint",
+    "md.comp.time-picker.time-selector.24h-vertical.container.width": {
+      "length": {
+        "value": 114,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.time-picker.time-selector.container.height": {
+      "length": {
+        "value": 80,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.time-picker.time-selector.container.shape": "md.sys.shape.corner.small",
+    "md.comp.time-picker.time-selector.container.width": {
+      "length": {
+        "value": 96,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.time-picker.time-selector.focus.state-layer.opacity": "md.sys.state.focus.state-layer-opacity",
+    "md.comp.time-picker.time-selector.hover.state-layer.opacity": "md.sys.state.hover.state-layer-opacity",
+    "md.comp.time-picker.time-selector.label-text.font": "md.sys.typescale.display-large.font",
+    "md.comp.time-picker.time-selector.label-text.line-height": "md.sys.typescale.display-large.line-height",
+    "md.comp.time-picker.time-selector.label-text.size": "md.sys.typescale.display-large.size",
+    "md.comp.time-picker.time-selector.label-text.tracking": "md.sys.typescale.display-large.tracking",
+    "md.comp.time-picker.time-selector.label-text.type": {
+      "type": {
+        "fontNameTokenName": "md.comp.time-picker.time-selector.label-text.font",
+        "fontWeightTokenName": "md.comp.time-picker.time-selector.label-text.weight",
+        "fontSizeTokenName": "md.comp.time-picker.time-selector.label-text.size",
+        "fontTrackingTokenName": "md.comp.time-picker.time-selector.label-text.tracking",
+        "lineHeightTokenName": "md.comp.time-picker.time-selector.label-text.line-height"
+      }
+    },
+    "md.comp.time-picker.time-selector.label-text.weight": "md.sys.typescale.display-large.weight",
+    "md.comp.time-picker.time-selector.pressed.state-layer.opacity": "md.sys.state.pressed.state-layer-opacity",
+    "md.comp.time-picker.time-selector.selected.container.color": "md.sys.color.primary-container",
+    "md.comp.time-picker.time-selector.selected.focus.label-text.color": "md.sys.color.on-primary-container",
+    "md.comp.time-picker.time-selector.selected.focus.state-layer.color": "md.sys.color.on-primary-container",
+    "md.comp.time-picker.time-selector.selected.hover.label-text.color": "md.sys.color.on-primary-container",
+    "md.comp.time-picker.time-selector.selected.hover.state-layer.color": "md.sys.color.on-primary-container",
+    "md.comp.time-picker.time-selector.selected.label-text.color": "md.sys.color.on-primary-container",
+    "md.comp.time-picker.time-selector.selected.pressed.label-text.color": "md.sys.color.on-primary-container",
+    "md.comp.time-picker.time-selector.selected.pressed.state-layer.color": "md.sys.color.on-primary-container",
+    "md.comp.time-picker.time-selector.separator.color": "md.sys.color.on-surface",
+    "md.comp.time-picker.time-selector.separator.font": "md.sys.typescale.display-large.font",
+    "md.comp.time-picker.time-selector.separator.line-height": "md.sys.typescale.display-large.line-height",
+    "md.comp.time-picker.time-selector.separator.size": "md.sys.typescale.display-large.size",
+    "md.comp.time-picker.time-selector.separator.tracking": "md.sys.typescale.display-large.tracking",
+    "md.comp.time-picker.time-selector.separator.type": {
+      "type": {
+        "fontNameTokenName": "md.comp.time-picker.time-selector.separator.font",
+        "fontWeightTokenName": "md.comp.time-picker.time-selector.separator.weight",
+        "fontSizeTokenName": "md.comp.time-picker.time-selector.separator.size",
+        "fontTrackingTokenName": "md.comp.time-picker.time-selector.separator.tracking",
+        "lineHeightTokenName": "md.comp.time-picker.time-selector.separator.line-height"
+      }
+    },
+    "md.comp.time-picker.time-selector.separator.weight": "md.sys.typescale.display-large.weight",
+    "md.comp.time-picker.time-selector.unselected.container.color": "md.sys.color.surface-container-highest",
+    "md.comp.time-picker.time-selector.unselected.focus.label-text.color": "md.sys.color.on-surface",
+    "md.comp.time-picker.time-selector.unselected.focus.state-layer.color": "md.sys.color.on-surface",
+    "md.comp.time-picker.time-selector.unselected.hover.label-text.color": "md.sys.color.on-surface",
+    "md.comp.time-picker.time-selector.unselected.hover.state-layer.color": "md.sys.color.on-surface",
+    "md.comp.time-picker.time-selector.unselected.label-text.color": "md.sys.color.on-surface",
+    "md.comp.time-picker.time-selector.unselected.pressed.label-text.color": "md.sys.color.on-surface",
+    "md.comp.time-picker.time-selector.unselected.pressed.state-layer.color": "md.sys.color.on-surface"
+  }
+}

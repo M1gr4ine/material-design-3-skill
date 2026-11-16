@@ -1,0 +1,171 @@
+{
+  "source": "https://m3.material.io/styles/motion/overview/specs",
+  "snapshot": "2026-10-13_06-10-19",
+  "model": "Normalized unit mass. dampingRatio is dimensionless. Web curves approximate uninterrupted motion.",
+  "scalarSuffixes": {
+    ".damping": "dampingRatio",
+    ".stiffness": "stiffness"
+  },
+  "schemes": {
+    "expressive": {
+      "md.sys.motion.spring.fast.spatial": {
+        "dampingRatio": 0.6,
+        "stiffness": 800,
+        "web": {
+          "durationMs": 350,
+          "cubicBezier": [
+            0.42,
+            1.67,
+            0.21,
+            0.9
+          ]
+        }
+      },
+      "md.sys.motion.spring.fast.effects": {
+        "dampingRatio": 1,
+        "stiffness": 3800,
+        "web": {
+          "durationMs": 150,
+          "cubicBezier": [
+            0.31,
+            0.94,
+            0.34,
+            1.0
+          ]
+        }
+      },
+      "md.sys.motion.spring.default.spatial": {
+        "dampingRatio": 0.8,
+        "stiffness": 380,
+        "web": {
+          "durationMs": 500,
+          "cubicBezier": [
+            0.38,
+            1.21,
+            0.22,
+            1.0
+          ]
+        }
+      },
+      "md.sys.motion.spring.default.effects": {
+        "dampingRatio": 1,
+        "stiffness": 1600,
+        "web": {
+          "durationMs": 200,
+          "cubicBezier": [
+            0.34,
+            0.8,
+            0.34,
+            1.0
+          ]
+        }
+      },
+      "md.sys.motion.spring.slow.spatial": {
+        "dampingRatio": 0.8,
+        "stiffness": 200,
+        "web": {
+          "durationMs": 650,
+          "cubicBezier": [
+            0.39,
+            1.29,
+            0.35,
+            0.98
+          ]
+        }
+      },
+      "md.sys.motion.spring.slow.effects": {
+        "dampingRatio": 1,
+        "stiffness": 800,
+        "web": {
+          "durationMs": 300,
+          "cubicBezier": [
+            0.34,
+            0.88,
+            0.34,
+            1.0
+          ]
+        }
+      }
+    },
+    "standard": {
+      "md.sys.motion.spring.fast.spatial": {
+        "dampingRatio": 0.9,
+        "stiffness": 1400,
+        "web": {
+          "durationMs": 350,
+          "cubicBezier": [
+            0.27,
+            1.06,
+            0.18,
+            1.0
+          ]
+        }
+      },
+      "md.sys.motion.spring.fast.effects": {
+        "dampingRatio": 1,
+        "stiffness": 3800,
+        "web": {
+          "durationMs": 150,
+          "cubicBezier": [
+            0.31,
+            0.94,
+            0.34,
+            1.0
+          ]
+        }
+      },
+      "md.sys.motion.spring.default.spatial": {
+        "dampingRatio": 0.9,
+        "stiffness": 700,
+        "web": {
+          "durationMs": 500,
+          "cubicBezier": [
+            0.27,
+            1.06,
+            0.18,
+            1.0
+          ]
+        }
+      },
+      "md.sys.motion.spring.default.effects": {
+        "dampingRatio": 1,
+        "stiffness": 1600,
+        "web": {
+          "durationMs": 200,
+          "cubicBezier": [
+            0.34,
+            0.8,
+            0.34,
+            1.0
+          ]
+        }
+      },
+      "md.sys.motion.spring.slow.spatial": {
+        "dampingRatio": 0.9,
+        "stiffness": 300,
+        "web": {
+          "durationMs": 750,
+          "cubicBezier": [
+            0.27,
+            1.06,
+            0.18,
+            1.0
+          ]
+        }
+      },
+      "md.sys.motion.spring.slow.effects": {
+        "dampingRatio": 1,
+        "stiffness": 800,
+        "web": {
+          "durationMs": 300,
+          "cubicBezier": [
+            0.34,
+            0.88,
+            0.34,
+            1.0
+          ]
+        }
+      }
+    }
+  }
+}

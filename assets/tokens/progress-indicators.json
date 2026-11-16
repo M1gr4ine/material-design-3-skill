@@ -1,0 +1,267 @@
+{
+  "source": "https://m3.material.io/components/progress-indicators/specs",
+  "snapshot": "2026-10-13_06-10-19",
+  "tokens": {
+    "md.comp.circular-progress-indicator.active-indicator.color": "md.sys.color.primary",
+    "md.comp.circular-progress-indicator.active-indicator.shape": "md.sys.shape.corner.none",
+    "md.comp.circular-progress-indicator.active-indicator.width": {
+      "length": {
+        "value": 4,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.circular-progress-indicator.four-color.active-indicator.four.color": {
+      "byContext": {
+        "default": "goog.ref.brand-color.green",
+        "Audience=3P": "md.sys.color.tertiary-container"
+      }
+    },
+    "md.comp.circular-progress-indicator.four-color.active-indicator.one.color": {
+      "byContext": {
+        "default": "goog.ref.brand-color.blue",
+        "Audience=3P": "md.sys.color.primary"
+      }
+    },
+    "md.comp.circular-progress-indicator.four-color.active-indicator.three.color": {
+      "byContext": {
+        "default": "goog.ref.brand-color.yellow",
+        "Audience=3P": "md.sys.color.tertiary"
+      }
+    },
+    "md.comp.circular-progress-indicator.four-color.active-indicator.two.color": {
+      "byContext": {
+        "default": "goog.ref.brand-color.red",
+        "Audience=3P": "md.sys.color.primary-container"
+      }
+    },
+    "md.comp.circular-progress-indicator.size": {
+      "length": {
+        "value": 48,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.linear-progress-indicator.active-indicator.color": "md.sys.color.primary",
+    "md.comp.linear-progress-indicator.active-indicator.height": {
+      "length": {
+        "value": 4,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.linear-progress-indicator.active-indicator.shape": "md.sys.shape.corner.none",
+    "md.comp.linear-progress-indicator.four-color.active-indicator.four.color": {
+      "byContext": {
+        "default": "goog.ref.brand-color.green",
+        "Audience=3P": "md.sys.color.tertiary-container"
+      }
+    },
+    "md.comp.linear-progress-indicator.four-color.active-indicator.one.color": {
+      "byContext": {
+        "default": "goog.ref.brand-color.blue",
+        "Audience=3P": "md.sys.color.primary"
+      }
+    },
+    "md.comp.linear-progress-indicator.four-color.active-indicator.three.color": {
+      "byContext": {
+        "default": "goog.ref.brand-color.yellow",
+        "Audience=3P": "md.sys.color.tertiary"
+      }
+    },
+    "md.comp.linear-progress-indicator.four-color.active-indicator.two.color": {
+      "byContext": {
+        "default": "goog.ref.brand-color.red",
+        "Audience=3P": "md.sys.color.primary-container"
+      }
+    },
+    "md.comp.linear-progress-indicator.track.color": "md.sys.color.surface-container-highest",
+    "md.comp.linear-progress-indicator.track.height": {
+      "length": {
+        "value": 4,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.linear-progress-indicator.track.shape": "md.sys.shape.corner.none",
+    "md.comp.progress-indicator.active-indicator-track-space": {
+      "length": {
+        "value": 4,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.progress-indicator.active-indicator.color": "md.sys.color.primary",
+    "md.comp.progress-indicator.active-indicator.shape": "md.sys.shape.corner.full",
+    "md.comp.progress-indicator.active-indicator.thickness": {
+      "length": {
+        "value": 4,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.progress-indicator.circular.active-indicator.thickness": {
+      "length": {
+        "value": 4,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.progress-indicator.circular.active-indicator.wave.amplitude": {
+      "length": {
+        "value": 1.6,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.progress-indicator.circular.active-indicator.wave.wavelength": {
+      "length": {
+        "value": 15,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.progress-indicator.circular.size": {
+      "length": {
+        "value": 40,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.progress-indicator.circular.thick.active-indicator.thickness": {
+      "length": {
+        "value": 8,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.progress-indicator.circular.thick.size": {
+      "length": {
+        "value": 52,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.progress-indicator.circular.thick.track-active-indicator-space": {
+      "length": {
+        "value": 4,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.progress-indicator.circular.thick.track.thickness": {
+      "length": {
+        "value": 8,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.progress-indicator.circular.track-active-indicator-space": "md.sys.measurement.space50",
+    "md.comp.progress-indicator.circular.track.thickness": {
+      "length": {
+        "value": 4,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.progress-indicator.circular.with-wave.size": {
+      "length": {
+        "value": 48,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.progress-indicator.linear.active-indicator.thickness": {
+      "length": {
+        "value": 4,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.progress-indicator.linear.active-indicator.wave.amplitude": {
+      "length": {
+        "value": 3,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.progress-indicator.linear.active-indicator.wave.wavelength": {
+      "length": {
+        "value": 40,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.progress-indicator.linear.height": {
+      "length": {
+        "value": 4,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.progress-indicator.linear.indeterminate.active-indicator.wave.wavelength": {
+      "length": {
+        "value": 20,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.progress-indicator.linear.stop-indicator.size": {
+      "length": {
+        "value": 4,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.progress-indicator.linear.stop-indicator.trailing-space": "md.sys.measurement.space0",
+    "md.comp.progress-indicator.linear.thick.active-indicator.thickness": {
+      "length": {
+        "value": 8,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.progress-indicator.linear.thick.height": {
+      "length": {
+        "value": 8,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.progress-indicator.linear.thick.stop-indicator.size": {
+      "length": {
+        "value": 4,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.progress-indicator.linear.thick.stop-indicator.trailing-space": {
+      "length": {
+        "value": 2,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.progress-indicator.linear.thick.track-active-indicator-space": {
+      "length": {
+        "value": 4,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.progress-indicator.linear.thick.track.thickness": {
+      "length": {
+        "value": 8,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.progress-indicator.linear.thick.with-wave.height": {
+      "length": {
+        "value": 14,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.progress-indicator.linear.track-active-indicator-space": "md.sys.measurement.space50",
+    "md.comp.progress-indicator.linear.track.thickness": {
+      "length": {
+        "value": 4,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.progress-indicator.linear.with-wave.height": {
+      "length": {
+        "value": 10,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.progress-indicator.stop-indicator.color": "md.sys.color.primary",
+    "md.comp.progress-indicator.stop-indicator.shape": "md.sys.shape.corner.full",
+    "md.comp.progress-indicator.stop-indicator.size": {
+      "length": {
+        "value": 4,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.progress-indicator.track.color": "md.sys.color.secondary-container",
+    "md.comp.progress-indicator.track.shape": "md.sys.shape.corner.full",
+    "md.comp.progress-indicator.track.thickness": {
+      "length": {
+        "value": 4,
+        "unit": "DIPS"
+      }
+    }
+  }
+}

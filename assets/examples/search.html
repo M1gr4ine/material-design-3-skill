@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>项目搜索</title>
+  <link rel="stylesheet" href="../motion.css">
+  <style>
+    :root {
+      color-scheme: light dark;
+      --surface: light-dark(#fef7ff, #141218);
+      --container: light-dark(#ece6f0, #2b2930);
+      --ink: light-dark(#1d1b20, #e6e0e9);
+      --hint: light-dark(#49454f, #cac4d0);
+      --accent: light-dark(#6750a4, #d0bcff);
+      --selected: light-dark(#e8def8, #4a4458);
+      --on-selected: light-dark(#1d192b, #e8def8);
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--surface); color: var(--ink); font: 1rem/1.5 Roboto, system-ui, sans-serif; }
+    main { width: min(100%, 47rem); margin: 8vh auto; padding: 0 1.5rem; }
+    h1 { margin: 0 0 1.5rem; font-size: 2rem; font-weight: 500; }
+    label { display: block; margin-block-end: .5rem; }
+    .anchor { position: relative; }
+    input {
+      inline-size: 100%; min-block-size: 3.5rem; border: 0; border-radius: 2rem;
+      padding-inline: 1.5rem; background: var(--container); color: var(--ink); font: inherit;
+    }
+    input:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+    input::placeholder { color: var(--hint); }
+    #suggestions {
+      position: absolute; inset-inline: 0; z-index: 1; margin: .5rem 0 0; padding: .25rem;
+      list-style: none; border-radius: 1rem; background: var(--container);
+      box-shadow: 0 4px 12px rgb(0 0 0 / .16);
+    }
+    [role=option] { display: flex; align-items: center; min-height: 3rem; padding-inline: 1.25rem; border-radius: .75rem; cursor: pointer; }
+    [role=option]:hover, [role=option][aria-selected=true] { background: var(--selected); color: var(--on-selected); }
+    #suggestions:not([hidden]) { animation: appear var(--m3-fast-effects-duration) var(--m3-fast-effects-curve); }
+    @keyframes appear { from { opacity: 0; } }
+    #status { color: var(--hint); margin-block: 1.5rem .25rem; }
+    #results { padding-inline-start: 1.25rem; }
+    #results li { margin-block: .5rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>项目库</h1>
+    <form role="search">
+      <label for="project">搜索项目</label>
+      <div class="anchor">
+        <input id="project" type="search" role="combobox" autocomplete="off" placeholder="按项目名称搜索"
+               aria-autocomplete="list" aria-controls="suggestions" aria-expanded="false">
+        <ul id="suggestions" role="listbox" aria-label="项目建议" hidden></ul>
+      </div>
+    </form>
+    <p id="status" role="status"></p>
+    <ul id="results" aria-label="搜索结果"></ul>
+  </main>
+  <script>
+    const projects = ["档案数字化", "门店巡检", "季度结算", "客户档案"];
+    const form = document.querySelector("form");
+    const input = document.querySelector("#project");
+    const list = document.querySelector("#suggestions");
+    const results = document.querySelector("#results");
+    const status = document.querySelector("#status");
+    let active = -1;
+
+    function matching() {
+      const query = input.value.trim();
+      return projects.filter(name => name.includes(query));
+    }
+
+    function setExpanded(expanded) {
+      active = -1;
+      list.hidden = !expanded;
+      input.setAttribute("aria-expanded", String(expanded));
+      input.removeAttribute("aria-activedescendant");
+    }
+
+    function showSuggestions() {
+      const matches = matching();
+      list.replaceChildren(...matches.map((name, index) => {
+        const option = document.createElement("li");
+        option.id = "project-option-" + index;
+        option.setAttribute("role", "option");
+        option.setAttribute("aria-selected", "false");
+        option.textContent = name;
+        option.addEventListener("pointerdown", event => event.preventDefault());
+        option.addEventListener("click", () => choose(name));
+        return option;
+      }));
+      setExpanded(matches.length > 0);
+    }
+
+    function submitQuery() {
+      setExpanded(false);
+      const found = matching();
+      results.replaceChildren(...found.map(name => {
+        const item = document.createElement("li");
+        item.textContent = name;
+        return item;
+      }));
+      status.textContent = found.length ? "找到 " + found.length + " 个项目" : "没有匹配的项目";
+    }
+
+    function choose(name) {
+      input.value = name;
+      submitQuery();
+    }
+
+    input.addEventListener("focus", showSuggestions);
+    input.addEventListener("click", showSuggestions);
+    input.addEventListener("input", showSuggestions);
+    input.addEventListener("blur", () => setExpanded(false));
+    input.addEventListener("keydown", event => {
+      if (event.isComposing) return;
+      if (event.key === "Escape" && !list.hidden) {
+        event.preventDefault();
+        setExpanded(false);
+      } else if (event.key === "Enter" && active >= 0) {
+        event.preventDefault();
+        choose(list.children[active].textContent);
+      } else if (event.key === "ArrowDown" || event.key === "ArrowUp") {
+        if (list.hidden) showSuggestions();
+        if (list.hidden) return;
+        event.preventDefault();
+        const last = list.children.length - 1;
+        if (event.key === "ArrowDown") {
+          active = Math.min(active + 1, last);
+        } else {
+          active = active === -1 ? last : Math.max(active - 1, 0);
+        }
+        for (const [index, option] of Array.from(list.children).entries()) {
+          option.setAttribute("aria-selected", String(index === active));
+        }
+        input.setAttribute("aria-activedescendant", list.children[active].id);
+      }
+    });
+    form.addEventListener("submit", event => {
+      event.preventDefault();
+      submitQuery();
+    });
+    submitQuery();
+  </script>
+</body>
+</html>

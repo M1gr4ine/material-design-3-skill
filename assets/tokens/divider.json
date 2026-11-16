@@ -1,0 +1,13 @@
+{
+  "source": "https://m3.material.io/components/divider/specs",
+  "snapshot": "2026-10-13_06-10-19",
+  "tokens": {
+    "md.comp.divider.color": "md.sys.color.outline-variant",
+    "md.comp.divider.thickness": {
+      "length": {
+        "value": 1,
+        "unit": "DIPS"
+      }
+    }
+  }
+}

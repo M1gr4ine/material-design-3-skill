@@ -1,0 +1,27 @@
+Material Design 3 Skill
+Copyright 2026 Material Design 3 Skill contributors
+
+The query tool, motion implementations and code examples are distributed
+under the Apache License, Version 2.0. See LICENSE for its terms.
+
+Material Design 3 is a design system by Google. The Chinese component and
+motion guides summarize Google's guidance. The JSON files reorganize the
+published token names, values and aliases by component or theme. The CSS
+presets use values from the same motion specifications. The platform
+mappings, examples and query interface were added by this project.
+
+The project documentation and curated design data are distributed under
+the Creative Commons Attribution 4.0 International license. Credit the
+Google Material Design team for the upstream specifications and Material
+Design 3 Skill contributors for this adaptation.
+
+Material Design 3 guidelines and upstream licensing information
+https://m3.material.io/get-started
+
+Component specifications and motion presets
+https://m3.material.io/components
+https://m3.material.io/styles/motion/overview/specs
+Individual source URLs are also recorded in the component guides and JSON.
+
+Creative Commons Attribution 4.0 International
+https://creativecommons.org/licenses/by/4.0/

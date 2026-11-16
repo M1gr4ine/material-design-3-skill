@@ -1,0 +1,37 @@
+{
+  "source": "https://m3.material.io/components/badges/specs",
+  "snapshot": "2026-10-13_06-10-19",
+  "tokens": {
+    "md.comp.badge.color": "md.sys.color.error",
+    "md.comp.badge.large.color": "md.sys.color.error",
+    "md.comp.badge.large.label-text.color": "md.sys.color.on-error",
+    "md.comp.badge.large.label-text.font": "md.sys.typescale.label-small.font",
+    "md.comp.badge.large.label-text.line-height": "md.sys.typescale.label-small.line-height",
+    "md.comp.badge.large.label-text.size": "md.sys.typescale.label-small.size",
+    "md.comp.badge.large.label-text.tracking": "md.sys.typescale.label-small.tracking",
+    "md.comp.badge.large.label-text.type": {
+      "type": {
+        "fontNameTokenName": "md.comp.badge.large.label-text.font",
+        "fontWeightTokenName": "md.comp.badge.large.label-text.weight",
+        "fontSizeTokenName": "md.comp.badge.large.label-text.size",
+        "fontTrackingTokenName": "md.comp.badge.large.label-text.tracking",
+        "lineHeightTokenName": "md.comp.badge.large.label-text.line-height"
+      }
+    },
+    "md.comp.badge.large.label-text.weight": "md.sys.typescale.label-small.weight",
+    "md.comp.badge.large.shape": "md.sys.shape.corner.full",
+    "md.comp.badge.large.size": {
+      "length": {
+        "value": 16,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.badge.shape": "md.sys.shape.corner.full",
+    "md.comp.badge.size": {
+      "length": {
+        "value": 6,
+        "unit": "DIPS"
+      }
+    }
+  }
+}

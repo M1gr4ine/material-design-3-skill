@@ -1,0 +1,29 @@
+{
+  "source": "https://m3.material.io/components/loading-indicator/specs",
+  "snapshot": "2026-10-13_06-10-19",
+  "tokens": {
+    "md.comp.loading-indicator.active-indicator.color": "md.sys.color.primary",
+    "md.comp.loading-indicator.active-indicator.size": {
+      "length": {
+        "value": 38,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.loading-indicator.contained.active-indicator.color": "md.sys.color.on-primary-container",
+    "md.comp.loading-indicator.contained.container.color": "md.sys.color.primary-container",
+    "md.comp.loading-indicator.container.color": "md.sys.color.secondary-container",
+    "md.comp.loading-indicator.container.height": {
+      "length": {
+        "value": 48,
+        "unit": "DIPS"
+      }
+    },
+    "md.comp.loading-indicator.container.shape": "md.sys.shape.corner.full",
+    "md.comp.loading-indicator.container.width": {
+      "length": {
+        "value": 48,
+        "unit": "DIPS"
+      }
+    }
+  }
+}

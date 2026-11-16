@@ -1,0 +1,415 @@
+{
+  "sources": [
+    "https://m3.material.io/styles/spacing/tokens",
+    "https://m3.material.io/styles/shape/corner-radius-scale",
+    "https://m3.material.io/styles/elevation/tokens",
+    "https://m3.material.io/foundations/interaction/states/state-layers"
+  ],
+  "snapshot": "2026-10-13_06-10-19",
+  "tokens": {
+    "md.sys.measurement.space0": {
+      "length": {
+        "value": 0,
+        "unit": "DIPS"
+      }
+    },
+    "md.sys.measurement.space100": {
+      "length": {
+        "value": 8,
+        "unit": "DIPS"
+      }
+    },
+    "md.sys.measurement.space125": {
+      "length": {
+        "value": 10,
+        "unit": "DIPS"
+      }
+    },
+    "md.sys.measurement.space150": {
+      "length": {
+        "value": 12,
+        "unit": "DIPS"
+      }
+    },
+    "md.sys.measurement.space175": {
+      "length": {
+        "value": 14,
+        "unit": "DIPS"
+      }
+    },
+    "md.sys.measurement.space200": {
+      "length": {
+        "value": 16,
+        "unit": "DIPS"
+      }
+    },
+    "md.sys.measurement.space25": {
+      "length": {
+        "value": 2,
+        "unit": "DIPS"
+      }
+    },
+    "md.sys.measurement.space250": {
+      "length": {
+        "value": 20,
+        "unit": "DIPS"
+      }
+    },
+    "md.sys.measurement.space300": {
+      "length": {
+        "value": 24,
+        "unit": "DIPS"
+      }
+    },
+    "md.sys.measurement.space400": {
+      "length": {
+        "value": 32,
+        "unit": "DIPS"
+      }
+    },
+    "md.sys.measurement.space450": {
+      "length": {
+        "value": 36,
+        "unit": "DIPS"
+      }
+    },
+    "md.sys.measurement.space50": {
+      "length": {
+        "value": 4,
+        "unit": "DIPS"
+      }
+    },
+    "md.sys.measurement.space500": {
+      "length": {
+        "value": 40,
+        "unit": "DIPS"
+      }
+    },
+    "md.sys.measurement.space600": {
+      "length": {
+        "value": 48,
+        "unit": "DIPS"
+      }
+    },
+    "md.sys.measurement.space700": {
+      "length": {
+        "value": 56,
+        "unit": "DIPS"
+      }
+    },
+    "md.sys.measurement.space75": {
+      "length": {
+        "value": 6,
+        "unit": "DIPS"
+      }
+    },
+    "md.sys.measurement.space800": {
+      "length": {
+        "value": 64,
+        "unit": "DIPS"
+      }
+    },
+    "md.sys.measurement.space900": {
+      "length": {
+        "value": 72,
+        "unit": "DIPS"
+      }
+    },
+    "md.sys.elevation.level0": {
+      "elevation": {
+        "value": 0,
+        "unit": "DIPS"
+      }
+    },
+    "md.sys.elevation.level1": {
+      "elevation": {
+        "value": 1,
+        "unit": "DIPS"
+      }
+    },
+    "md.sys.elevation.level2": {
+      "elevation": {
+        "value": 3,
+        "unit": "DIPS"
+      }
+    },
+    "md.sys.elevation.level3": {
+      "elevation": {
+        "value": 6,
+        "unit": "DIPS"
+      }
+    },
+    "md.sys.elevation.level4": {
+      "elevation": {
+        "value": 8,
+        "unit": "DIPS"
+      }
+    },
+    "md.sys.elevation.level5": {
+      "elevation": {
+        "value": 12,
+        "unit": "DIPS"
+      }
+    },
+    "md.sys.elevation.surface-tint-color": {
+      "color": {
+        "red": 0.40392157,
+        "green": 0.3137255,
+        "blue": 0.6431373,
+        "alpha": 1
+      }
+    },
+    "md.sys.shape.corner-value.extra-extra-large": {
+      "length": {
+        "value": 48,
+        "unit": "DIPS"
+      }
+    },
+    "md.sys.shape.corner-value.extra-large": {
+      "length": {
+        "value": 28,
+        "unit": "DIPS"
+      }
+    },
+    "md.sys.shape.corner-value.extra-large-increased": {
+      "length": {
+        "value": 32,
+        "unit": "DIPS"
+      }
+    },
+    "md.sys.shape.corner-value.extra-small": {
+      "length": {
+        "value": 4,
+        "unit": "DIPS"
+      }
+    },
+    "md.sys.shape.corner-value.large": {
+      "length": {
+        "value": 16,
+        "unit": "DIPS"
+      }
+    },
+    "md.sys.shape.corner-value.large-increased": {
+      "length": {
+        "value": 20,
+        "unit": "DIPS"
+      }
+    },
+    "md.sys.shape.corner-value.medium": {
+      "length": {
+        "value": 12,
+        "unit": "DIPS"
+      }
+    },
+    "md.sys.shape.corner-value.none": {
+      "length": {
+        "value": 0,
+        "unit": "DIPS"
+      }
+    },
+    "md.sys.shape.corner-value.small": {
+      "length": {
+        "value": 8,
+        "unit": "DIPS"
+      }
+    },
+    "md.sys.shape.corner.extra-extra-large": {
+      "shape": {
+        "family": "SHAPE_FAMILY_ROUNDED_CORNERS",
+        "defaultSize": {
+          "value": 48,
+          "unit": "DIPS"
+        }
+      }
+    },
+    "md.sys.shape.corner.extra-large": {
+      "shape": {
+        "family": "SHAPE_FAMILY_ROUNDED_CORNERS",
+        "defaultSize": {
+          "value": 28,
+          "unit": "DIPS"
+        }
+      }
+    },
+    "md.sys.shape.corner.extra-large-increased": {
+      "shape": {
+        "family": "SHAPE_FAMILY_ROUNDED_CORNERS",
+        "defaultSize": {
+          "value": 32,
+          "unit": "DIPS"
+        }
+      }
+    },
+    "md.sys.shape.corner.extra-large.top": {
+      "shape": {
+        "family": "SHAPE_FAMILY_ROUNDED_CORNERS",
+        "topLeft": {
+          "value": 28,
+          "unit": "DIPS"
+        },
+        "topRight": {
+          "value": 28,
+          "unit": "DIPS"
+        },
+        "defaultSize": {
+          "unit": "DIPS"
+        }
+      }
+    },
+    "md.sys.shape.corner.extra-small": {
+      "shape": {
+        "family": "SHAPE_FAMILY_ROUNDED_CORNERS",
+        "defaultSize": {
+          "value": 4,
+          "unit": "DIPS"
+        }
+      }
+    },
+    "md.sys.shape.corner.extra-small.top": {
+      "shape": {
+        "family": "SHAPE_FAMILY_ROUNDED_CORNERS",
+        "topLeft": {
+          "value": 4,
+          "unit": "DIPS"
+        },
+        "topRight": {
+          "value": 4,
+          "unit": "DIPS"
+        },
+        "defaultSize": {
+          "unit": "DIPS"
+        }
+      }
+    },
+    "md.sys.shape.corner.full": {
+      "shape": {
+        "family": "SHAPE_FAMILY_CIRCULAR"
+      }
+    },
+    "md.sys.shape.corner.large": {
+      "shape": {
+        "family": "SHAPE_FAMILY_ROUNDED_CORNERS",
+        "defaultSize": {
+          "value": 16,
+          "unit": "DIPS"
+        }
+      }
+    },
+    "md.sys.shape.corner.large-increased": {
+      "shape": {
+        "family": "SHAPE_FAMILY_ROUNDED_CORNERS",
+        "defaultSize": {
+          "value": 20,
+          "unit": "DIPS"
+        }
+      }
+    },
+    "md.sys.shape.corner.large.end": {
+      "shape": {
+        "family": "SHAPE_FAMILY_ROUNDED_CORNERS",
+        "topRight": {
+          "value": 16,
+          "unit": "DIPS"
+        },
+        "bottomRight": {
+          "value": 16,
+          "unit": "DIPS"
+        },
+        "defaultSize": {
+          "unit": "DIPS"
+        }
+      }
+    },
+    "md.sys.shape.corner.large.start": {
+      "shape": {
+        "family": "SHAPE_FAMILY_ROUNDED_CORNERS",
+        "topLeft": {
+          "value": 16,
+          "unit": "DIPS"
+        },
+        "bottomLeft": {
+          "value": 16,
+          "unit": "DIPS"
+        },
+        "defaultSize": {
+          "unit": "DIPS"
+        }
+      }
+    },
+    "md.sys.shape.corner.large.top": {
+      "shape": {
+        "family": "SHAPE_FAMILY_ROUNDED_CORNERS",
+        "topLeft": {
+          "value": 16,
+          "unit": "DIPS"
+        },
+        "topRight": {
+          "value": 16,
+          "unit": "DIPS"
+        },
+        "defaultSize": {
+          "unit": "DIPS"
+        }
+      }
+    },
+    "md.sys.shape.corner.medium": {
+      "shape": {
+        "family": "SHAPE_FAMILY_ROUNDED_CORNERS",
+        "defaultSize": {
+          "value": 12,
+          "unit": "DIPS"
+        }
+      }
+    },
+    "md.sys.shape.corner.none": {
+      "shape": {
+        "family": "SHAPE_FAMILY_ROUNDED_CORNERS",
+        "defaultSize": {
+          "unit": "DIPS"
+        }
+      }
+    },
+    "md.sys.shape.corner.small": {
+      "shape": {
+        "family": "SHAPE_FAMILY_ROUNDED_CORNERS",
+        "defaultSize": {
+          "value": 8,
+          "unit": "DIPS"
+        }
+      }
+    },
+    "md.sys.state.disabled.state-layer-opacity": {
+      "opacity": 0.38
+    },
+    "md.sys.state.dragged.state-layer-opacity": {
+      "opacity": 0.16
+    },
+    "md.sys.state.focus.state-layer-opacity": {
+      "opacity": 0.1
+    },
+    "md.sys.state.hover.state-layer-opacity": {
+      "opacity": 0.08
+    },
+    "md.sys.state.pressed.state-layer-opacity": {
+      "opacity": 0.1
+    },
+    "md.sys.state.focus-indicator.inner-offset": {
+      "length": {
+        "value": -3,
+        "unit": "DIPS"
+      }
+    },
+    "md.sys.state.focus-indicator.outer-offset": {
+      "length": {
+        "value": 2,
+        "unit": "DIPS"
+      }
+    },
+    "md.sys.state.focus-indicator.thickness": {
+      "length": {
+        "value": 3,
+        "unit": "DIPS"
+      }
+    }
+  }
+}

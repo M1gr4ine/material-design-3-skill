@@ -1,0 +1,41 @@
+/* M3 spring-to-curve mappings for non-gesture transitions. */
+:root, [data-m3-motion="expressive"] {
+  --m3-fast-spatial-duration: 350ms;
+  --m3-fast-spatial-curve: cubic-bezier(0.42, 1.67, 0.21, 0.9);
+  --m3-fast-effects-duration: 150ms;
+  --m3-fast-effects-curve: cubic-bezier(0.31, 0.94, 0.34, 1.0);
+  --m3-default-spatial-duration: 500ms;
+  --m3-default-spatial-curve: cubic-bezier(0.38, 1.21, 0.22, 1.0);
+  --m3-default-effects-duration: 200ms;
+  --m3-default-effects-curve: cubic-bezier(0.34, 0.8, 0.34, 1.0);
+  --m3-slow-spatial-duration: 650ms;
+  --m3-slow-spatial-curve: cubic-bezier(0.39, 1.29, 0.35, 0.98);
+  --m3-slow-effects-duration: 300ms;
+  --m3-slow-effects-curve: cubic-bezier(0.34, 0.88, 0.34, 1.0);
+}
+
+[data-m3-motion="standard"] {
+  --m3-fast-spatial-duration: 350ms;
+  --m3-fast-spatial-curve: cubic-bezier(0.27, 1.06, 0.18, 1.0);
+  --m3-fast-effects-duration: 150ms;
+  --m3-fast-effects-curve: cubic-bezier(0.31, 0.94, 0.34, 1.0);
+  --m3-default-spatial-duration: 500ms;
+  --m3-default-spatial-curve: cubic-bezier(0.27, 1.06, 0.18, 1.0);
+  --m3-default-effects-duration: 200ms;
+  --m3-default-effects-curve: cubic-bezier(0.34, 0.8, 0.34, 1.0);
+  --m3-slow-spatial-duration: 750ms;
+  --m3-slow-spatial-curve: cubic-bezier(0.27, 1.06, 0.18, 1.0);
+  --m3-slow-effects-duration: 300ms;
+  --m3-slow-effects-curve: cubic-bezier(0.34, 0.88, 0.34, 1.0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root, [data-m3-motion] {
+    --m3-fast-spatial-duration: 0ms;
+    --m3-fast-effects-duration: 0ms;
+    --m3-default-spatial-duration: 0ms;
+    --m3-default-effects-duration: 0ms;
+    --m3-slow-spatial-duration: 0ms;
+    --m3-slow-effects-duration: 0ms;
+  }
+}
