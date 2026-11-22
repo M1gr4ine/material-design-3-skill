@@ -3,48 +3,138 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>项目搜索</title>
+  <title>项目搜索 · Material Design 3</title>
+  <link rel="stylesheet" href="../tokens.css">
   <link rel="stylesheet" href="../motion.css">
   <style>
-    :root {
-      color-scheme: light dark;
-      --surface: light-dark(#fef7ff, #141218);
-      --container: light-dark(#ece6f0, #2b2930);
-      --ink: light-dark(#1d1b20, #e6e0e9);
-      --hint: light-dark(#49454f, #cac4d0);
-      --accent: light-dark(#6750a4, #d0bcff);
-      --selected: light-dark(#e8def8, #4a4458);
-      --on-selected: light-dark(#1d192b, #e8def8);
-    }
     * { box-sizing: border-box; }
-    body { margin: 0; background: var(--surface); color: var(--ink); font: 1rem/1.5 Roboto, system-ui, sans-serif; }
-    main { width: min(100%, 47rem); margin: 8vh auto; padding: 0 1.5rem; }
-    h1 { margin: 0 0 1.5rem; font-size: 2rem; font-weight: 500; }
-    label { display: block; margin-block-end: .5rem; }
+    body {
+      margin: 0;
+      background: var(--md-sys-color-surface);
+      color: var(--md-sys-color-on-surface);
+      font-family: var(--md-sys-typescale-body-large-font);
+      font-size: var(--md-sys-typescale-body-large-size);
+      line-height: var(--md-sys-typescale-body-large-line-height);
+      letter-spacing: var(--md-sys-typescale-body-large-tracking);
+    }
+    main {
+      width: min(100%, 47rem);
+      margin: 8vh auto;
+      padding: 0 var(--md-sys-measurement-space300);
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--md-sys-measurement-space200);
+      margin-block-end: var(--md-sys-measurement-space300);
+    }
+    h1 {
+      margin: 0;
+      font-family: var(--md-sys-typescale-headline-large-font);
+      font-size: var(--md-sys-typescale-headline-large-size);
+      line-height: var(--md-sys-typescale-headline-large-line-height);
+      font-weight: var(--md-sys-typescale-emphasized-headline-large-weight);
+    }
+    .theme-toggle {
+      min-height: 2.5rem;
+      padding-inline: var(--md-sys-measurement-space200);
+      border: 1px solid var(--md-sys-color-outline-variant);
+      border-radius: var(--md-sys-shape-corner-full);
+      background: var(--md-sys-color-surface-container-low);
+      color: var(--md-sys-color-on-surface);
+      font-family: var(--md-sys-typescale-label-large-font);
+      font-size: var(--md-sys-typescale-label-large-size);
+      font-weight: var(--md-sys-typescale-label-large-weight);
+      cursor: pointer;
+      transition: background-color var(--m3-fast-effects-duration) var(--m3-fast-effects-curve);
+    }
+    .theme-toggle:hover {
+      background: color-mix(in srgb, var(--md-sys-color-on-surface) calc(var(--md-sys-state-hover-state-layer-opacity) * 100%), var(--md-sys-color-surface-container-low));
+    }
+    .theme-toggle:focus-visible,
+    input:focus-visible {
+      outline: var(--md-sys-state-focus-indicator-thickness) solid var(--md-sys-color-secondary);
+      outline-offset: var(--md-sys-state-focus-indicator-outer-offset);
+    }
+    label {
+      display: block;
+      margin-block-end: var(--md-sys-measurement-space100);
+      color: var(--md-sys-color-on-surface-variant);
+      font-size: var(--md-sys-typescale-label-large-size);
+      font-weight: var(--md-sys-typescale-label-large-weight);
+    }
     .anchor { position: relative; }
     input {
-      inline-size: 100%; min-block-size: 3.5rem; border: 0; border-radius: 2rem;
-      padding-inline: 1.5rem; background: var(--container); color: var(--ink); font: inherit;
+      inline-size: 100%;
+      min-block-size: var(--md-sys-measurement-space700);
+      border: 0;
+      border-radius: var(--md-sys-shape-corner-full);
+      padding-inline: var(--md-sys-measurement-space300);
+      background: var(--md-sys-color-surface-container-high);
+      color: var(--md-sys-color-on-surface);
+      font: inherit;
+      transition: background-color var(--m3-fast-effects-duration) var(--m3-fast-effects-curve);
     }
-    input:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
-    input::placeholder { color: var(--hint); }
+    input:hover {
+      background: color-mix(in srgb, var(--md-sys-color-on-surface) calc(var(--md-sys-state-hover-state-layer-opacity) * 100%), var(--md-sys-color-surface-container-high));
+    }
+    input::placeholder { color: var(--md-sys-color-on-surface-variant); }
     #suggestions {
-      position: absolute; inset-inline: 0; z-index: 1; margin: .5rem 0 0; padding: .25rem;
-      list-style: none; border-radius: 1rem; background: var(--container);
-      box-shadow: 0 4px 12px rgb(0 0 0 / .16);
+      position: absolute;
+      inset-inline: 0;
+      z-index: 1;
+      margin: var(--md-sys-measurement-space100) 0 0;
+      padding: var(--md-sys-measurement-space50);
+      list-style: none;
+      border-radius: var(--md-sys-shape-corner-large);
+      background: var(--md-sys-color-surface-container-high);
+      box-shadow: var(--md-sys-elevation-level3);
     }
-    [role=option] { display: flex; align-items: center; min-height: 3rem; padding-inline: 1.25rem; border-radius: .75rem; cursor: pointer; }
-    [role=option]:hover, [role=option][aria-selected=true] { background: var(--selected); color: var(--on-selected); }
-    #suggestions:not([hidden]) { animation: appear var(--m3-fast-effects-duration) var(--m3-fast-effects-curve); }
+    [role=option] {
+      display: flex;
+      align-items: center;
+      min-height: var(--md-sys-measurement-space600);
+      padding-inline: var(--md-sys-measurement-space250);
+      border-radius: var(--md-sys-shape-corner-medium);
+      cursor: pointer;
+    }
+    [role=option]:hover {
+      background: color-mix(in srgb, var(--md-sys-color-on-surface) calc(var(--md-sys-state-hover-state-layer-opacity) * 100%), transparent);
+    }
+    [role=option][aria-selected=true] {
+      background: var(--md-sys-color-secondary-container);
+      color: var(--md-sys-color-on-secondary-container);
+    }
+    #suggestions:not([hidden]) {
+      animation: appear var(--m3-fast-effects-duration) var(--m3-fast-effects-curve);
+    }
     @keyframes appear { from { opacity: 0; } }
-    #status { color: var(--hint); margin-block: 1.5rem .25rem; }
-    #results { padding-inline-start: 1.25rem; }
-    #results li { margin-block: .5rem; }
+    #status {
+      color: var(--md-sys-color-on-surface-variant);
+      margin-block: var(--md-sys-measurement-space300) var(--md-sys-measurement-space50);
+      font-size: var(--md-sys-typescale-body-medium-size);
+    }
+    #results {
+      list-style: none;
+      padding: 0;
+      margin: var(--md-sys-measurement-space100) 0 0;
+      display: grid;
+      gap: var(--md-sys-measurement-space100);
+    }
+    #results li {
+      padding: var(--md-sys-measurement-space150) var(--md-sys-measurement-space200);
+      border-radius: var(--md-sys-shape-corner-medium);
+      background: var(--md-sys-color-surface-container-low);
+    }
   </style>
 </head>
 <body>
   <main>
-    <h1>项目库</h1>
+    <header>
+      <h1>项目库</h1>
+      <button type="button" class="theme-toggle" id="theme-toggle" aria-pressed="false">切换深浅色</button>
+    </header>
     <form role="search">
       <label for="project">搜索项目</label>
       <div class="anchor">
@@ -63,7 +153,24 @@
     const list = document.querySelector("#suggestions");
     const results = document.querySelector("#results");
     const status = document.querySelector("#status");
+    const themeToggle = document.querySelector("#theme-toggle");
     let active = -1;
+
+    function currentTheme() {
+      const explicit = document.documentElement.dataset.theme;
+      if (explicit === "dark" || explicit === "light") return explicit;
+      return matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+
+    function syncThemeToggle() {
+      themeToggle.setAttribute("aria-pressed", String(currentTheme() === "dark"));
+    }
+
+    themeToggle.addEventListener("click", () => {
+      document.documentElement.dataset.theme = currentTheme() === "dark" ? "light" : "dark";
+      syncThemeToggle();
+    });
+    syncThemeToggle();
 
     function matching() {
       const query = input.value.trim();

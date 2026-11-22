@@ -1,11 +1,37 @@
 ---
 name: material-design-3
-description: 当 Web、原生桌面或手机 App 采用 Google Material Design 3、Material You 或 M3 Expressive，需要设计、实现或审查界面组件、布局、主题或动效时使用。
+description: >-
+  当 Web、原生桌面或手机 App 采用 Google Material Design 3、Material You 或 M3 Expressive，
+  需要设计、实现、生成主题或审查界面组件、布局、色彩令牌与弹簧动效时使用。
+  Use when designing, building, theming, or auditing Material Design 3 (M3 / MD3),
+  Material You, or M3 Expressive UIs across Web (HTML/CSS/React/Vue/Svelte/Angular/Tailwind),
+  Android (Jetpack Compose / Views), Flutter, iOS/macOS, or native desktop (WinUI/WPF/Qt/JVM).
+license: Apache-2.0 AND CC-BY-4.0
+compatibility: >-
+  Compatible with Agent Skills standard (Antigravity, Claude Code, Codex, Cursor,
+  Gemini CLI, OpenCode, Windsurf, GitHub Copilot, DSH). Optional CLI scripts use
+  Python 3.9+ standard library only (no third-party dependencies).
+metadata:
+  spec_snapshot: "2026-10-13"
+  components: "36"
+  tokens: "5091"
 ---
 
 # Material Design 3
 
 按用户要完成的动作选组件。设计稿从组件契约取变体与交互，代码把同一契约接到项目已有的控件、状态和主题。
+
+## 执行流程
+
+1. **先选宿主官方库，再补齐令牌。** Android 用 Jetpack Compose Material 3 / MDC-Android，Flutter 用 `package:flutter/material.dart`，Angular 用 `@angular/material`。通用 Web（HTML/React/Vue/Svelte/Tailwind）或桌面端直接复用本技能的 [CSS 令牌](assets/tokens.css)、[动效变量](assets/motion.css) 与 [平台映射](references/platforms.md)——不要因为名字带 Material 就误装默认仍是 Material 2 风格的 `@mui/material`，也不要假设处于维护模式的 `@material/web` 覆盖了 M3 Expressive。
+2. **先定品牌主题，严禁硬编码任意色值。** 已有品牌色时运行 `python scripts/theme.py --seed "#HEX" --format css|tailwind|json|compose|flutter`（支持 `tonal-spot` / `fidelity` / `expressive` / `vibrant` / `neutral` / `monochrome` 及 `standard` / `medium` / `high` 对比度），并用 `--audit` 校验 WCAG 2.1 对比度；默认基线直接引入 [assets/tokens.css](assets/tokens.css)。
+3. **按任务查组件契约与精确令牌。** 从下表读对应组件指南，需要精确高度、圆角、颜色角色或弹簧参数时运行 `python scripts/component.py <组件> --token <关键词> --resolve` 或直接读 `assets/tokens/<组件>.json`。
+4. **守住 M3 关键护栏：**
+   - **表面阶梯优先于重阴影**：用 `surface-container-lowest` → `low` → `default` → `high` → `highest` 区分层级，只在菜单、浮层、停靠面板等需要脱离背景处叠加海拔阴影。
+   - **成对绑定语义色**：前景永远配对应 `on-*` 角色（如 `primary` 配 `on-primary`，`secondary-container` 配 `on-secondary-container`）。
+   - **交互状态层与焦点环**：实现 hover（8%）、focus/pressed（10%）、dragged（16%）、disabled（38%）状态层，保留 `3dp` 粗、`2dp` 外偏移的可见键盘焦点环，触屏目标保证 `48×48 dp`。
+   - **图标与字体回退**：图标优先采用 Google **Material Symbols**（导航未选中 `FILL 0`、选中 `FILL 1`），字体栈保留中文字体回退（如 `"Roboto", "Noto Sans SC", system-ui, sans-serif`）。
+   - **空间与效果分通道动效 + 减少动效**：位置/尺寸/圆角用 spatial 弹簧，颜色/透明度用 effects 弹簧；响应 `prefers-reduced-motion` / 系统减少动效偏好，直接呈现目标状态并保留焦点与业务结果。
 
 ## 按任务取组件
 
@@ -29,14 +55,12 @@ description: 当 Web、原生桌面或手机 App 采用 Google Material Design 3
 
 | 情境 | 读取与使用 |
 | --- | --- |
-| 建立产品视觉层级、配浅深色、字阶或高密度样式 | [设计原则与主题](references/foundations.md)。把颜色绑定到成对角色，再套具体组件令牌。 |
+| 建立产品视觉层级、配浅深色、生成品牌主题或字阶 | [设计原则与主题](references/foundations.md) · [离线 CSS 令牌](assets/tokens.css) · [HCT 主题与对比度脚本](scripts/theme.py) |
 | 同一页面要覆盖桌面、网页缩放、平板或手机 | [窗口、输入与布局](references/adaptive-layout.md)。用可用窗宽和任务关系决定单/双窗格，跨断点复用当前对象和命令。 |
-| 做弹簧、控件反馈、页面转场、拖动或减少动态效果 | [动效](references/motion.md)。组件先取自身规格，空间属性与颜色/透明度分别驱动。 |
-| 将组件移植到项目使用的编程语言或框架 | [平台适配与代码样例](references/platforms.md)。Web、Windows、跨平台桌面、Android、iOS 和 Flutter 各有落点。 |
-| 按名称、颜色或精确尺寸查值 | [离线令牌用法](references/tokens.md)。直接读 JSON，也可运行 [组件查询](scripts/component.py)。 |
+| 做弹簧、控件反馈、页面转场、拖动或减少动态效果 | [动效](references/motion.md) · [CSS 变量](assets/motion.css) · [可打断弹簧](assets/spring.mjs) |
+| 选用 Google 官方组件库或移植到项目语言与框架 | [平台适配与代码样例](references/platforms.md)。含 Google 官方库现状及 Web、Angular、Compose、Flutter、桌面和 iOS 落点。 |
+| 按名称、颜色或精确尺寸查值并展开别名链 | [离线令牌用法](references/tokens.md) · [组件与令牌查询](scripts/component.py) |
 
-组合页面时，搜索范围跟随窗格，工具栏命令作用于当前对象，导航跟随路由，进度取自正在执行的任务。用户启用减少动态效果时，可直接呈现目标状态，保留操作结果、焦点与进度反馈。
-
-验收自适应工作区时，可以先搜索并选中一个文件，再缩窄窗口，从菜单对它执行同一条命令。
+组合页面时，搜索范围跟随窗格，工具栏命令作用于当前对象，导航跟随路由，进度取自正在执行的任务。验收自适应工作区时，可以先搜索并选中一个文件，再缩窄窗口，从菜单对它执行同一条命令。
 
 [官方组件目录](https://m3.material.io/components) · [按钮选型总览](https://m3.material.io/components/all-buttons)

@@ -35,7 +35,7 @@ export function createSpring(initial, spec, render, tolerance = 0.01) {
   let frame = null;
 
   function sample(now) {
-    return sampleSpring(origin, initialVelocity, target, (now - startTime) / 1000, spec);
+    return sampleSpring(origin, initialVelocity, target, Math.max(0, (now - startTime) / 1000), spec);
   }
 
   function cancelFrame() {
