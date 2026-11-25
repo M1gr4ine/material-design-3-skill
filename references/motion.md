@@ -8,7 +8,7 @@
 
 | 场景 | 空间属性 spatial | 效果属性 effects |
 | --- | --- | --- |
-| fast，小范围反馈 | 开关滑块、按钮圆角、图标旋转 | 按压层、开关着色 |
+| fast，小范围反馈 | 开关滑块、按钮圆角、导航指示胶囊、图标旋转 | 按压层、开关着色 |
 | default，局部视区 | 面板位置、导航轨展开 | 面板内容或遮罩透明度 |
 | slow，大面积变化 | 全屏容器尺寸或位置 | 全屏内容刷新 |
 
@@ -61,6 +61,37 @@
 }
 .morph-btn[aria-pressed="true"] { border-radius: var(--md-sys-shape-corner-large-increased); }
 .morph-btn:active { transform: scale(0.97); } /* 不重设 transition 简写 */
+```
+
+**导航活动指示胶囊（Active indicator）水平中心展开。** 导航栏（基线 `64×32 dp` / Expressive 垂直 `56×32 dp`）与折叠导航轨（`56×32 dp`）切页时，将 `secondary-container` 指示胶囊放在图标容器独立伪元素 `::before`（`border-radius: 16px` 精确半高，容器设 `isolation: isolate` 保证胶囊不压图标），按压/悬停状态层放在 `::after` 避免互盖。入场 `scaleX(0.35) → 1` 走 **fast spatial**、`opacity` 走 **fast effects**（纯合成层不触发重排）；离场两通道均走 **fast effects** 干脆收起，不做反向回弹；启用 `prefers-reduced-motion: reduce` 时 [motion.css](../assets/motion.css) 自动将时长归零直接静态标出当前页。
+
+```css
+.nav-icon-wrap {
+  position: relative; display: inline-flex; align-items: center; justify-content: center;
+  width: 64px; height: 32px; isolation: isolate; /* Expressive 垂直项或导航轨取 56px */
+}
+.nav-icon-wrap::before, .nav-icon-wrap::after {
+  content: ""; position: absolute; inset: 0; border-radius: 16px; pointer-events: none;
+}
+.nav-icon-wrap::before { /* 活动指示胶囊：离场双通道 fast effects 干脆收起 */
+  z-index: -1; background: var(--md-sys-color-secondary-container);
+  opacity: 0; transform: scaleX(0.35);
+  transition:
+    transform var(--m3-fast-effects-duration) var(--m3-fast-effects-curve),
+    opacity var(--m3-fast-effects-duration) var(--m3-fast-effects-curve);
+}
+.nav-item[aria-current="page"] .nav-icon-wrap::before { /* 入场：水平展开 fast spatial + 淡入 fast effects */
+  opacity: 1; transform: scaleX(1);
+  transition:
+    transform var(--m3-fast-spatial-duration) var(--m3-fast-spatial-curve),
+    opacity var(--m3-fast-effects-duration) var(--m3-fast-effects-curve);
+}
+.nav-icon-wrap::after { /* 独立状态层，避免点击态与指示胶囊互盖 */
+  background: currentColor; opacity: 0;
+  transition: opacity var(--m3-fast-effects-duration) var(--m3-fast-effects-curve);
+}
+.nav-item:hover .nav-icon-wrap::after { opacity: var(--md-sys-state-hover-state-layer-opacity); }
+.nav-item:active .nav-icon-wrap::after { opacity: var(--md-sys-state-pressed-state-layer-opacity); }
 ```
 
 **可打断的空间变化。** [spring.mjs](../assets/spring.mjs) 可以驱动面板偏移。拖动时调用 `slide.jump(offset)`，松手时调用 `slide.to(snapPoint, velocity)`，速度单位为 px/s。改用 `slide.to(newTarget)` 会承接当前速度。系统启用减少动效时直接定位，卸载面板时调用 `slide.dispose()`。

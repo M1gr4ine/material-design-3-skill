@@ -6,7 +6,7 @@
 
 `IconButton(icon, accessibleName, onActivate)`；切换型再绑定 `selected`。可选 standard、filled、tonal、outlined，五种尺寸、窄/标准/宽容器与圆/方形状按空间选。
 
-选择态可用线框/实心图标加容器变化。无论视觉大小，命中包含整个按钮；触屏的 XS/S 也预留至少 48×48 dp 的目标。
+选择态可用线框/实心图标加容器变化。无论视觉大小，命中包含整个按钮；触屏的 XS/S 也预留至少 48×48 dp 的目标。Web 若用 `position: absolute` 的 `::before`/`::after` 在 `48×48` 命中区内绘制较小可见背景框、选中容器或状态层，宿主按钮须设 `isolation: isolate` 且背景伪元素设 `z-index: -1`，避免定位伪元素按 CSS 层叠顺序盖住直接字符/图标（不透明容器色会直接遮没文字，半透明底也会拉低对比度）；轻量描边选中态可用 `color`/`border-color: var(--md-sys-color-primary)` 配 `z-index: -1` 的 `background: color-mix(in srgb, var(--md-sys-color-primary) 16%, transparent)` 兼顾高对比度与可读性。
 
 ## 动效与输入
 

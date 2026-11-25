@@ -10,7 +10,7 @@
 
 ## 动效与输入
 
-指示形状跟随选中项；不同顶级目的地用 top-level 淡出再淡入。减少动效用静态指示标出当前页。
+活动指示胶囊（基线 `64×32 dp` / Expressive 垂直 `56×32 dp`，`secondary-container`，精确半高 `16px` 圆角）随切换水平中心展开：选中入场 `scaleX(0.35) → 1` 用 fast spatial、`opacity` 用 fast effects；取消选中离场两通道均用 fast effects 干脆收起（无反向回弹）。Web 建议将指示胶囊与按压状态层拆到独立伪元素（如 `::before` / `::after`）避免互盖，示范代码见 [动效](motion.md)；不同顶级目的地内容用 top-level 淡出再淡入，减少动效直接静态标出当前页。
 
 Web 使用命名的 nav 和链接，并以 `aria-current="page"` 标出当前位置，可复制地址、后退或新开标签页。触屏在系统安全区上方留出目标区域。
 

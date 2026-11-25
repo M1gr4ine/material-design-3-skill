@@ -10,7 +10,7 @@
 
 ## 动效与输入
 
-展开宽度与内容用 default spatial / effects 协调，关闭可从中途反向。顶级目的地切换采用 top-level；减少动态效果时直接更换轨宽和选中指示。
+活动指示胶囊（折叠态垂直项 `56×32 dp`，`secondary-container`，精确半高 `16px` 圆角）切换时按与导航栏一致的水平中心展开过渡：入场 `scaleX(0.35) → 1` 用 fast spatial、`opacity` 用 fast effects，离场双通道均用 fast effects 干脆收起，指示层与状态层分层实现（示范代码见 [动效](motion.md)）。展开宽度与内容用 default spatial / effects 协调，关闭可从中途反向；顶级目的地切换采用 top-level，减少动态效果时直接更换轨宽和选中指示。
 
 非模态轨允许在导航和正文间跳转；模态展开要管理焦点和返回。桌面可通过键盘直接选择链接，触屏的图标项仍带明确名称。
 
