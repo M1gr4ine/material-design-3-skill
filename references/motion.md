@@ -44,6 +44,25 @@
 }
 ```
 
+**Web CSS 弹簧形变与按压护栏。**
+- **圆角形变禁配 `9999px`（及 `%`/`px` 混用）：** Expressive `fast spatial` 曲线存在过冲（峰值约 `1.09`），而浏览器对 CSS `border-radius` 插值的是未裁剪的原始声明值而非实际渲染半径。若从 `9999px` 过渡到 `22px`，前半程值持续大于控件半高导致画面近似静止，进入过冲段又跌入负值（约 `-897px`）被强行钳制为 **`0px` 尖角方块**再弹回；反向 `14px → 9999px` 则首帧即突破半高瞬间跳变。`--md-sys-shape-corner-full: 9999px` 仅用于静态圆/胶囊；凡参与 `border-radius` 形变的控件，满圆态必须使用**实际短边一半的精确 `px`**（如 72 px 按钮取 `36px`、44 px 取 `22px`，或 `calc(var(--btn-size) / 2)`），且起止状态统一用 `px`（勿混用 `50%` 与 `px`，以免跨 WebView 插值兼容问题或非正方形变成椭圆）。
+- **`:active` 勿覆写 `transition` 简写：** 全局或局部写 `button:active { transform: scale(.97); transition: transform ... }` 时，更高优先级的 `:active` 会在按下瞬间把 `border-radius`/`background-color` 从 `transition` 简写中清掉、抬手再恢复，与播放/选中等异步状态切换并发时引发跳变或连闪。应在基础态一次性声明完整的分通道 `transition`，`:active` 只改目标属性本身。
+
+```css
+.morph-btn {
+  --btn-size: 72px;
+  width: var(--btn-size);
+  height: var(--btn-size);
+  border-radius: calc(var(--btn-size) / 2); /* 36px，勿用 9999px */
+  transition:
+    border-radius var(--m3-fast-spatial-duration) var(--m3-fast-spatial-curve),
+    background-color var(--m3-fast-effects-duration) var(--m3-fast-effects-curve),
+    transform var(--m3-fast-effects-duration) var(--m3-fast-effects-curve);
+}
+.morph-btn[aria-pressed="true"] { border-radius: var(--md-sys-shape-corner-large-increased); }
+.morph-btn:active { transform: scale(0.97); } /* 不重设 transition 简写 */
+```
+
 **可打断的空间变化。** [spring.mjs](../assets/spring.mjs) 可以驱动面板偏移。拖动时调用 `slide.jump(offset)`，松手时调用 `slide.to(snapPoint, velocity)`，速度单位为 px/s。改用 `slide.to(newTarget)` 会承接当前速度。系统启用减少动效时直接定位，卸载面板时调用 `slide.dispose()`。
 
 ```js

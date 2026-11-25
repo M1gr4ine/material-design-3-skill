@@ -12,7 +12,7 @@
 
 Contained 栏高 56 dp，聚焦时外边距从 24 dp 缩至 12 dp。宽度变化用 spatial，内容显隐用 effects。
 
-紧凑窗口用全屏搜索，宽窗用输入框下方的 docked 面板；关闭覆盖层时回到触发点。Web 的值建议用 combobox + listbox，输入持有焦点，上下键预览、Enter 接受、Esc 收起。可导航的搜索结果用链接列表；桌面支持鼠标、键盘和窗口内缩放。
+紧凑窗口用全屏搜索，宽窗用输入框下方的 docked 面板；关闭覆盖层时回到触发点。Web 的值建议用 combobox + listbox，输入持有焦点，上下键预览、Enter 接受、Esc 收起；若外层胶囊容器（`border-radius: 9999px`）包裹图标与 `<input>`，应隐藏内部 `<input>` 的默认 `outline`（防止命中全局 `input:focus-visible` 在胶囊内画出直角框），改由外层胶囊容器通过 `:focus-within`（或 `:has(:focus-visible)`）承接焦点环。可导航的搜索结果用链接列表；桌面支持鼠标、键盘和窗口内缩放。
 
 ## 取用示例
 

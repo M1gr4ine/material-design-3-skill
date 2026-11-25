@@ -24,14 +24,14 @@ metadata:
 ## 执行流程
 
 1. **先选宿主官方库，再补齐令牌。** Android 用 Jetpack Compose Material 3 / MDC-Android，Flutter 用 `package:flutter/material.dart`，Angular 用 `@angular/material`。通用 Web（HTML/React/Vue/Svelte/Tailwind）或桌面端直接复用本技能的 [CSS 令牌](assets/tokens.css)、[动效变量](assets/motion.css) 与 [平台映射](references/platforms.md)——不要因为名字带 Material 就误装默认仍是 Material 2 风格的 `@mui/material`，也不要假设处于维护模式的 `@material/web` 覆盖了 M3 Expressive。
-2. **先定品牌主题，严禁硬编码任意色值。** 已有品牌色时运行 `python scripts/theme.py --seed "#HEX" --format css|tailwind|json|compose|flutter`（支持 `tonal-spot` / `fidelity` / `expressive` / `vibrant` / `neutral` / `monochrome` 及 `standard` / `medium` / `high` 对比度），并用 `--audit` 校验 WCAG 2.1 对比度；默认基线直接引入 [assets/tokens.css](assets/tokens.css)。
+2. **先定品牌主题，严禁硬编码任意色值。** 已有品牌色时运行 `python scripts/theme.py --seed "#HEX" --format css|tailwind|json|compose|flutter`（默认 `tonal-spot`，另支持 `fidelity` / `expressive` / `vibrant` / `neutral` / `monochrome` 及 `standard` / `medium` / `high` 对比度），并用 `--audit` 校验 WCAG 2.1 对比度；默认基线直接引入 [assets/tokens.css](assets/tokens.css)。
 3. **按任务查组件契约与精确令牌。** 从下表读对应组件指南，需要精确高度、圆角、颜色角色或弹簧参数时运行 `python scripts/component.py <组件> --token <关键词> --resolve` 或直接读 `assets/tokens/<组件>.json`。
 4. **守住 M3 关键护栏：**
    - **表面阶梯优先于重阴影**：用 `surface-container-lowest` → `low` → `default` → `high` → `highest` 区分层级，只在菜单、浮层、停靠面板等需要脱离背景处叠加海拔阴影。
    - **成对绑定语义色**：前景永远配对应 `on-*` 角色（如 `primary` 配 `on-primary`，`secondary-container` 配 `on-secondary-container`）。
    - **交互状态层与焦点环**：实现 hover（8%）、focus/pressed（10%）、dragged（16%）、disabled（38%）状态层，保留 `3dp` 粗、`2dp` 外偏移的可见键盘焦点环，触屏目标保证 `48×48 dp`。
    - **图标与字体回退**：图标优先采用 Google **Material Symbols**（导航未选中 `FILL 0`、选中 `FILL 1`），字体栈保留中文字体回退（如 `"Roboto", "Noto Sans SC", system-ui, sans-serif`）。
-   - **空间与效果分通道动效 + 减少动效**：位置/尺寸/圆角用 spatial 弹簧，颜色/透明度用 effects 弹簧；响应 `prefers-reduced-motion` / 系统减少动效偏好，直接呈现目标状态并保留焦点与业务结果。
+   - **空间与效果分通道动效 + 减少动效**：位置/尺寸/圆角用 spatial 弹簧，颜色/透明度用 effects 弹簧；Web 对 `border-radius` 做弹簧形变时，满圆态须用实际短边一半的精确 `px` 而非 `9999px`（避免过冲闪成直角），且 `:active` 不覆写 `transition` 简写；响应 `prefers-reduced-motion` / 系统减少动效偏好，直接呈现目标状态并保留焦点与业务结果。
 
 ## 按任务取组件
 

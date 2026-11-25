@@ -10,10 +10,10 @@
 
 | 设计决定 | 落地 |
 | --- | --- |
-| 强调主要操作 | 高强调容器用 `primary` 搭配 `on-primary`；较温和的强调使用对应 `container` / `on-container`。一个任务区域内给最重要的动作最高视觉权重。 |
+| 强调主要操作 | 高强调容器用 `primary` 搭配 `on-primary`；较温和的强调使用对应 `container` / `on-container`。一个任务区域内给最重要的动作最高视觉权重；主动作之外的次级或重复控件（如卡片内播放按钮、迷你底栏操作）优先使用 `secondary-container` 或更高层级表面色（`surface-container-high` / `highest`），避免在深色界面散落大面积高饱和 `primary-container`。 |
 | 组织表面（Surface Ladder） | 优先用表面色阶而非重阴影表达层级：`surface-container-lowest`（最底卡片/画布）→ `low`（elevated 卡片）→ `default`（导航/常驻区）→ `high`（搜索栏/对话框）→ `highest`（filled 卡片/顶部强调），背景正文用 `surface` / `on-surface`。 |
 | 报错与选中 | 将 `error` 与对应前景配对，给出可操作的文字。选中态同时使用标记、轮廓、位置或语义状态，保留不同色觉下的可辨识性。 |
-| 品牌动态色与对比度 | 固定品牌色可用离线脚本 `python scripts/theme.py --seed "#HEX"`（内置 Google HCT 算法，支持 `tonal-spot` / `fidelity` / `expressive` / `vibrant` / `neutral` / `monochrome` 及 `standard` / `medium` / `high` 对比度，导出 CSS / Tailwind / JSON / Compose / Flutter）；需要运行时按用户壁纸或内容取色时接入 Google 官方 `@material/material-color-utilities`。 |
+| 品牌动态色与对比度 | 固定品牌色可用离线脚本 `python scripts/theme.py --seed "#HEX"`（内置 Google HCT 算法，默认 `tonal-spot`，另支持 `fidelity` / `expressive` / `vibrant` / `neutral` / `monochrome` 及 `standard` / `medium` / `high` 对比度，导出 CSS / Tailwind / JSON / Compose / Flutter）；通用界面推荐以 `tonal-spot` 为默认，`vibrant` 会将主色拉至色域最大彩度（深色模式下的 `primary-container` 饱和度极高），仅在明确需要强色彩主视觉时选用；需要运行时按用户壁纸或内容取色时接入 Google 官方 `@material/material-color-utilities`。 |
 | 对接设计令牌 | 例如 `md.comp.search-bar.container.color → md.sys.color.surface-container-high → 当前主题值`。主题决定品牌色，组件决定用途。 |
 
 离线文件提供 50 个浅色及 50 个深色 Web 基线颜色角色，并已整理为即插即用的 [tokens.css](../assets/tokens.css)。用实际前/背景色对测对比度：普通文本按 4.5:1、大文本与非文本控件/边界按 3:1 核对（可用 `python scripts/theme.py --audit` 或 `--pair FG BG` 离线核验）。[离线色表](../assets/baseline-colors.json) · [HCT 主题脚本](../scripts/theme.py) · [配色角色](https://m3.material.io/styles/color/roles) · [选用配色方案](https://m3.material.io/styles/color/choosing-a-scheme) · [色彩对比](https://m3.material.io/foundations/designing/color-contrast)
@@ -22,6 +22,6 @@
 
 - **字阶。** 五类角色各有大中小。`display` 用于高强调短文，`headline` 是页级题名，`title` 给工具区/卡片标题，`body` 给内容，`label` 给控件。15 个基线字阶对应 15 个 `emphasized` 样式，适合选中项或关键数字。系统字号、翻译及中文字体回退（如 `"Roboto", "Noto Sans SC", system-ui, sans-serif`）应保留层级。离线表给出字体、字号、字重、行高、字距。[字阶数据](../assets/type-scale.json) · [字阶规范](https://m3.material.io/styles/typography/type-scale-tokens)
 - **间距。** 区分父容器 padding、子项间 gap 与容器外 margin。官方以 `space100 = 8 dp` 表示基本单位，也有 2/4/6 dp 等细分；搜索栏聚焦时改变 margin，图标和文字内部仍有自己的间距。紧凑桌面优先缩短留白，混合输入保留触摸目标。[间距系统](https://m3.material.io/styles/spacing/tokens)
-- **形状。** 角色从 0、4、8、12、16、20、28、32、48 dp 到 `full`；大小与形状可分别选。用同族轮廓提示对象相关性，用轮廓变化表示按下或选中。35 个表达性形状适用于需要突出的位置，例如加载过程中的形变；文字输入的边框以识别和稳定为先。[圆角尺度](https://m3.material.io/styles/shape/corner-radius-scale) · [形变](https://m3.material.io/styles/shape/shape-morph)
+- **形状。** 角色从 0、4、8、12、16、20、28、32、48 dp 到 `full`；大小与形状可分别选。用同族轮廓提示对象相关性，用轮廓变化表示按下或选中。Web 中 `--md-sys-shape-corner-full`（`9999px`）仅用于静态圆/胶囊；混合圆角或 `border-radius` 弹簧形变须改用实际短边一半的精确 `px`，避免按比例缩放坍缩或过冲闪成直角。35 个表达性形状适用于需要突出的位置，例如加载过程中的形变；文字输入的边框以识别和稳定为先。[圆角尺度](https://m3.material.io/styles/shape/corner-radius-scale) · [形变](https://m3.material.io/styles/shape/shape-morph)
 - **海拔。** 级别 0–5 对应 0、1、3、6、8、12 dp。优先用表面色与遮挡关系，必要时配阴影表达层叠（菜单、浮层、停靠面板等）。静态分组首先考虑留白与表面色。[海拔](https://m3.material.io/styles/elevation/overview)
 - **图标（Material Symbols）与状态层。** 优先采用 Google 官方 **Material Symbols** 可变字体（Outlined / Rounded / Sharp 四轴：`FILL`、`wght`、`GRAD`、`opsz`）。导航栏/导航轨未选中项用 `FILL 0`，选中项平滑切到 `FILL 1`；常见图标尺寸为 `24 dp`（`opsz 24`）配合 `48×48 dp` 命中区。默认、悬停（8%）、聚焦（10%）、按下（10%）、拖动（16%）属于交互状态层（Web 可用 `color-mix(in srgb, currentColor 8%, transparent)` 叠加）；选中、错误、忙碌属于内容或任务状态。键盘焦点环（`3 dp` 粗、`2 dp` 外偏移）要能独立辨识。[Material Symbols](https://fonts.google.com/icons) · [图标规范](https://m3.material.io/styles/icons/applying-icons) · [状态层](https://m3.material.io/foundations/interaction/states/state-layers)

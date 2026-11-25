@@ -10,7 +10,7 @@
 
 ## 动效与输入
 
-Expressive 可随按压改变轮廓，切换后用形状和颜色表明选择。轮廓用 fast spatial，着色用 fast effects。
+Expressive 可随按压改变轮廓，切换后用形状和颜色表明选择。轮廓用 fast spatial，着色用 fast effects。Web CSS 做圆角形变时，满圆态须用实际短边一半的精确 `px`（如 40 px 高取 `20px`）而非 `9999px`（避免 `fast spatial` 过冲钳制为 `0px` 直角），且 `:active` 只改目标属性、不覆写 `transition` 简写。
 
 Web 的普通动作使用原生 button，表单提交才用 submit；切换按钮暴露 `aria-pressed`。桌面命令和触屏点击接入同一动作，图标随标签一起命中。
 

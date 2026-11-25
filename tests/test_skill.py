@@ -135,6 +135,23 @@ class SkillIntegrityTests(unittest.TestCase):
             self.assertIn(f"{var}-weight: {style['weight']};", root_block.group(1))
             self.assertIn(f"{var}-tracking: {track};", root_block.group(1))
 
+    def test_motion_css_matches_official_json_snapshot(self) -> None:
+        css = (ROOT / "assets" / "motion.css").read_text(encoding="utf-8")
+        motion = json.loads((ROOT / "assets" / "motion.json").read_text(encoding="utf-8"))
+        blocks = {
+            "expressive": re.search(r':root,\s*\[data-m3-motion="expressive"\]\s*\{(.*?)\n\}', css, re.DOTALL),
+            "standard": re.search(r'\[data-m3-motion="standard"\]\s*\{(.*?)\n\}', css, re.DOTALL),
+        }
+        for scheme, match in blocks.items():
+            self.assertIsNotNone(match, f"Missing motion.css block for {scheme}")
+            body = match.group(1)
+            for token_name, spec in motion["schemes"][scheme].items():
+                slot = token_name.removeprefix("md.sys.motion.spring.").replace(".", "-")
+                web = spec["web"]
+                curve = ", ".join(str(v) for v in web["cubicBezier"])
+                self.assertIn(f"--m3-{slot}-duration: {web['durationMs']}ms;", body)
+                self.assertIn(f"--m3-{slot}-curve: cubic-bezier({curve});", body)
+
 
 class ComponentCliTests(unittest.TestCase):
     def test_list_and_alias_resolution(self) -> None:

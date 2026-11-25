@@ -1,4 +1,9 @@
-/* M3 spring-to-curve mappings for non-gesture transitions. */
+/* M3 spring-to-curve mappings for non-gesture transitions.
+ * Expressive spatial curves overshoot >1 (fast-spatial peaks ~1.09): for border-radius morphs,
+ * interpolate between real px radii (exact half short-side, never 9999px or mixed %/px) so
+ * overshoot does not clamp negative values to 0px; declare full transitions on the base rule
+ * and avoid resetting the transition shorthand inside :active.
+ */
 :root, [data-m3-motion="expressive"] {
   --m3-fast-spatial-duration: 350ms;
   --m3-fast-spatial-curve: cubic-bezier(0.42, 1.67, 0.21, 0.9);
